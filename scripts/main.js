@@ -24,6 +24,12 @@ const allBtn = document.querySelector("#all");
 const cseBtn = document.querySelector("#cse");
 const wddBtn = document.querySelector("#wdd");
 
+const buttons = document.querySelectorAll(".buttons button");
+
+function setActive(button) {
+    buttons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+}
 
 // List Array
 const courses = [
@@ -146,16 +152,20 @@ function calculateCredits(courseList) {
 
 allBtn.addEventListener("click", () => {
     displayCourses(courses);
+    setActive(allBtn);
 });
 
 cseBtn.addEventListener("click", () => {
     const filtered = courses.filter(course => course.subject === "CSE");
     displayCourses(filtered);
+    setActive(cseBtn);
 });
 
 wddBtn.addEventListener("click", () => {
     const filtered = courses.filter(course => course.subject === "WDD");
     displayCourses(filtered);
+    setActive(wddBtn);
 });
 
 displayCourses(courses);
+setActive(allBtn);
