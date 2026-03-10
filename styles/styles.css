@@ -144,10 +144,11 @@ section p {
         position: absolute;
         top: 60px;
         right: 10px;
+        width: 180px;
         flex-direction: column;
         background-color: var(--backgroundcolor);
-        width: 200px;
-        
+        border-radius: 4px;
+        gap: 0;
     }
     
     .navigation.open {
@@ -156,7 +157,8 @@ section p {
 
     
     .navigation li {
-        border-top: 1px solid var(--textcolor);
+        width: 100%;
+        
     }
 
     .navigation a {
