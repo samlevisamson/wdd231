@@ -26,7 +26,7 @@ nav {
     grid-template-columns: auto;
     background-color: #555;
     padding: 5px 0 5px 10px;
-    border-bottom: solid 1px #000;
+    border-bottom: solid 1px #fff;
 }
 
 nav ul {
