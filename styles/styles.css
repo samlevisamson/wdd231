@@ -9,7 +9,7 @@
 /* Prevent content touching screen edges */
 
 body {
-    margin: 0;
+    margin: 5px;
     padding: 0;
     font-family: "Roboto", sans-serif;
 }
@@ -39,9 +39,12 @@ header img {
 }
 
 nav {
-    
-    background-color: var(--backgroundcolor);
+    max-width: 100%;
+    margin: 10px;
     padding: 0 10px;
+    background-color: var(--backgroundcolor);
+    padding: 0px;
+   
 }
 
 nav ul {
@@ -179,13 +182,16 @@ section p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    margin-top: 10px;
 }
 
 #course-container div {
     background: var(--sectioncolor);
-    padding: 5px;
+    padding: 8px;
     text-align: center;
     border-radius: 5px;
+    border: 1px solid var(--bordercolor);
+    font-weight: 500;
 }
 
 .completed::after {
@@ -196,13 +202,13 @@ section p {
 .buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 10px;
     margin: 10px 0;
 }
 
 .buttons button {
     
-    padding: 5px;
+    padding: 8px;
     font-size: 16px;
     font-weight: bold;
     border-radius: 6px;
