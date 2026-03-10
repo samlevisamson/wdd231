@@ -1,4 +1,11 @@
 
+:root {
+    --textcolor: #ffffff;
+    --sectioncolor: #ddd;
+    --bordercolor: #464545;
+    --backgroundcolor: #FFD700;
+}
+
 /* Prevent content touching screen edges */
 
 body {
@@ -11,9 +18,14 @@ header {
     display: grid;
     grid-template-columns: 30px auto 40px;
     padding: 5px 0 5px 10px;
-    align-items: end;
-    border-bottom: solid 1px #ddd;
+    align-items:center;
+    position: relative;
     column-gap: 8px;
+}
+
+header span {
+    font-size: 1.4rem;
+    font-weight: thin;
 }
 
 header img {
@@ -21,12 +33,15 @@ header img {
     height: auto;
 }
 
+.navigation {
+    display: flex;
+    gap: 1rem;
+}
+
 nav {
-    display: grid;
-    grid-template-columns: auto;
-    background-color: #afe;
-    padding: 5px 0 5px 10px;
-    border-bottom: solid 1px #ddd;
+    
+    background-color: var(--backgroundcolor);
+    padding: 0 10px;
 }
 
 nav ul {
@@ -35,16 +50,24 @@ nav ul {
     display: flex;
     gap: 1rem;
     padding: 0;
+    margin: 0;
 }
 
 nav a {
-    color: #ddd;
+    display: block;
+    padding: 12px 18px;
     text-decoration: none;
-    padding: 0.5rem
+    
 }
 
 nav a:hover {
-    color: yellow;
+    background-color: var(--bordercolor);
+    color: var(--textcolor);
+}
+
+nav a.active {
+    background-color: var(--bordercolor);
+    color: var(--textcolor);
 }
 
 main {
@@ -62,14 +85,15 @@ main {
 }
 
 section {
-    border: 1px solid #333;
-    background-color:#ddd;
+    border: 1px solid var(--bordercolor);
+    background-color: var(--sectioncolor);
     column-gap: 5px;
 }
 
 section h2 {
-    color: #ddd;
-    background-color: #000;
+    font-size: 1.3rem;
+    font-weight:normal;
+    background-color: var(--backgroundcolor);
     padding:5px;
     margin: 0;
     text-align: center;
@@ -114,11 +138,27 @@ section p {
 
     .navigation {
         display: none;
+        position: absolute;
+        top: 60px;
+        right: 10px;
         flex-direction: column;
+        background-color: var(--backgroundcolor);
+        width: 200px;
+        
     }
     
     .navigation.open {
         display: flex;
+    }
+
+    
+    .navigation li {
+        border-top: 1px solid var(--textcolor);
+    }
+
+    .navigation a {
+        display: block;
+        padding: 10px;
     }
 
     .hamburger {
@@ -142,7 +182,7 @@ section p {
 }
 
 #course-container div {
-    background: #ddd;
+    background: var(--sectioncolor);
     padding: 5px;
     text-align: center;
     border-radius: 5px;
@@ -166,13 +206,13 @@ section p {
     font-size: 16px;
     font-weight: bold;
     border-radius: 6px;
-    border: 1px solid #555;
-    background-color: #ddd;
+    border: 1px solid var(--bordercolor);
+    background-color: var(--sectioncolor);
     cursor: pointer;
 }
 
 .buttons button:hover {
-    background-color: #bbb;
+    background-color: var(--backgroundcolor);
 }
 
 .credits {
