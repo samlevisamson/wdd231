@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="This webpage provides information about the topic of the page.">
+<meta name="author" content="Sam Levi Samson">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Web Page</title>
+
+<!-- Added CSS file here -->
+<Link rel="stylesheet" href="styles/normalize.css">
+<Link rel="stylesheet" href="styles/small.css"> 
+<Link rel="stylesheet" href="styles/larger.css">
+<link rel="stylesheet" href="styles/styles.css">
+
+<!-- Added JavaScript file here -->
+<script src="scripts/main.js" defer></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Use font weight 100 for Thin and 400 for Regular -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <!-- Added site logo using an SVG file -->
+         
+        <img src="images/house-solid-full.svg" alt="Site Logo">
+
+        <!-- Added your name using span -->
+        <span>Sam Levi Samson</span>
+
+        <!-- Added hamburger icon for small screens -->
+        <button class="hamburger" aria-label="Menu"> ☰ </button>
+    </header>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chamber.html">Chamber Project</a></li>
+            <li><a href="final.html">Final Project</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Added main page heading -->
+
+        <h1>Home</h1>
+
+        <div class="top-sections">
+    
+            <!-- Added first section -->
+            <section class="about">
+                <h2>About Me</h2>
+                <p>My name is Sam Levi Samson. I am studying for a Bachelor of Applied Science in Software Development and currently pursuing a certificate in Web and Computer Programming. I am taking Web Frontend Development I (WDD 231) to strengthen my frontend development skills as I work toward a career as a DevOps Engineer. You can also view the Chamber of Commerce Project and the Final Project that I built with my classmates as part of this course.
+                </p>
+            </section>
+            
+            <!-- Added second section -->
+            <section class="photo">
+                <h2>Student Photo</h2>
+                <img src="images/sam-image.webp" alt="Student Photo">
+            </section>
+        </div>    
+        <!-- Added third section -->
+        <section class="courses">
+            <h2>Web Certificate Courses</h2>
+            <div class="buttons">
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+
+            <div id="course-container"></div>
+
+            <div class="credits">
+                <span id="totalCredits"></span>
+                <span id="completedCredits"></span>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <!-- Item 1: Social media links -->
+        <div class="social">
+            <a href="https://github.com/samlevisamson" target="_blank">
+                <img src="images/github.svg" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/sam-levi-samson-2784273b6/" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://x.com/home" target="_blank">
+                <img src="images/twitter.svg" alt="Twitter">
+            </a>
+        </div>
+    
+        <!-- Item 2: Copyright, year (dynamic), name and location -->
+        <p>
+            &copy; <span id="currentyear"></span> Sam Levi Samson | India
+        </p>
+    
+        <!-- Item 3: Last modified date -->
+        <p id="lastModified"></p>
+    
+    </footer>
+</body>
+</html>
