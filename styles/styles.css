@@ -5,6 +5,8 @@
     --bordercolor: #464545;
     --backgroundcolor: #FFD700;
     --blackcolor: #000;
+    --whitebackground: #f2f2f2;
+    --greencolor: #008000;
 }
 
 /* Prevent content touching screen edges */
@@ -200,7 +202,7 @@ section p {
 
 .completed::after {
     content: " ✓";
-    color: green;
+    color: var(--greencolor);
     font-weight: bold;
 }
 .buttons {
@@ -246,7 +248,7 @@ section p {
 
 footer {
     text-align: center;
-    background: #f2f2f2;
+    background: var(--whitebackground);
     padding: 10px;
 }
 
