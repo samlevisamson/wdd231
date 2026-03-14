@@ -39,12 +39,14 @@ const displayMembers = (companies) => {
         let phone = document.createElement("p");
         let website = document.createElement("a");
         let industry = document.createElement("p");
+        let membership = document.createElement("p");
         let image = document.createElement("img");
 
         name.textContent = company.name;
         address.textContent = company.address;
         phone.textContent = company.phone;
         industry.textContent = `Industry: ${company.industry}`;
+        industry.textContent = `Membership: ${company.membership}`;
 
         website.textContent = company.website;
         website.href = company.website;
@@ -61,6 +63,7 @@ const displayMembers = (companies) => {
         card.appendChild(address);
         card.appendChild(phone);
         card.appendChild(industry);
+        card.appendChild(membership);
 
         card.appendChild(website);
 

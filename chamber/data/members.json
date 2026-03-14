@@ -62,6 +62,15 @@
       "image": "zoho.webp",
       "membership": 3,
       "industry": "Software Company"
+    },
+    {
+      "name": "Suguna Foods",
+      "address": "Trichy Road, Ramanathapuram, Coimbatore",
+      "phone": "0422 2312000",
+      "website": "https://www.sugunafoods.com/",
+      "image": "sugunafoods.webp",
+      "membership": 3,
+      "industry": "Poultry and Food Processing"
     }
   ]
 }
