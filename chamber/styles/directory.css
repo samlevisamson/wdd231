@@ -234,7 +234,7 @@ main h1 {
     }
 
     #members.list section {
-        display: flex;
+        display:inline-flex;
         gap: 5px;
     }
 
