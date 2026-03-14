@@ -167,6 +167,10 @@ main h1 {
     display: none;
 }
 
+#members.list a {
+    word-break: break-word;
+}
+
 /* Hamburger */
 
 
@@ -186,7 +190,7 @@ main h1 {
 
 /* Mobile Responsive */
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
 
     header img {
         width: 40px;
@@ -228,19 +232,17 @@ main h1 {
     }
 
     #members.list section {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        grid-template-columns: 1fr 1fr;
         gap: 5px;
     }
 
     #members.list h2 {
-        margin-bottom: 5px;
+        grid-column: span 2;
     }
 
-    #members.list a {
+    /* #members.list a {
         margin-top: 5px;
-    }
+    } */
 
 
 }
