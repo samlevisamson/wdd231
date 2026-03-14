@@ -91,7 +91,9 @@ main h1 {
 
 /* GRID VIEW */
 
-
+#members {
+    min-height: 400px;
+}
 
 #members.grid {
     display: grid;
@@ -120,8 +122,8 @@ main h1 {
 /* Company logo */
 
 #members img {
-    max-width: 120px;
-    max-height: 80px;
+    width: 120px;
+    height: 80px;
     object-fit: contain;
     margin: 0.5rem auto;
     display: block;

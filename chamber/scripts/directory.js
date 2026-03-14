@@ -53,8 +53,8 @@ const displayMembers = (companies) => {
         image.setAttribute("src", `images/${company.image}`);
         image.setAttribute("alt", `${company.name} logo`);
         image.setAttribute("loading", "lazy");
-        image.setAttribute("width", "200");
-        image.setAttribute("height", "200");
+        image.setAttribute("width", "120");
+        image.setAttribute("height", "80");
 
         card.appendChild(name);
         card.appendChild(image);
