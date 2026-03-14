@@ -1,0 +1,67 @@
+{
+  "companies": [
+    {
+      "name": "KG Hospital",
+      "address": "5 Arts College Rd, Coimbatore",
+      "phone": "0422 2212121",
+      "website": "https://www.kghospital.com/",
+      "image": "kghospital.webp",
+      "membership": 3,
+      "industry": "Healthcare"
+    },
+    {
+      "name": "Lakshmi Mills",
+      "address": "1100 Avanashi Rd, Coimbatore",
+      "phone": "0422 2245461",
+      "website": "https://www.lakshmimills.com/",
+      "image": "lakshmimills.webp",
+      "membership": 2,
+      "industry": "Textiles"
+    },
+    {
+      "name": "Sakthi Auto Motors",
+      "address": "Trichy Road, Coimbatore",
+      "phone": "0422 4095000",
+      "website": "https://www.sakthiauto.com/",
+      "image": "sakthiauto.webp",
+      "membership": 2,
+      "industry": "Automobile Parts"
+    },
+    {
+      "name": "Freshco Supermarket",
+      "address": "RS Puram, Coimbatore",
+      "phone": "0422 2547777",
+      "website": "https://www.freshco.co.in/",
+      "image": "freshco.webp",
+      "membership": 1,
+      "industry": "Retail"
+    },
+    {
+      "name": "ABT Industries",
+      "address": "Pollachi Road, Coimbatore",
+      "phone": "0422 4303333",
+      "website": "https://www.abtindustries.com/",
+      "image": "abt.webp",
+      "membership": 3,
+      "industry": "Manufacturing"
+    },
+    {
+      "name": "Sri Krishna Sweets",
+      "address": "DB Road, RS Puram, Coimbatore",
+      "phone": "0422 2552222",
+      "website": "https://www.srikrishnasweets.com/",
+      "image": "krishna-sweets.webp",
+      "membership": 2,
+      "industry": "Food & Sweets"
+    },
+    {
+      "name": "Zoho Corp",
+      "address": "Estancia IT Park, Coimbatore",
+      "phone": "044 67447070",
+      "website": "https://www.zoho.com/",
+      "image": "zoho.webp",
+      "membership": 3,
+      "industry": "Software Company"
+    }
+  ]
+}

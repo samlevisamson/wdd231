@@ -36,6 +36,7 @@ const displayProphets = (prophets) => {
       cards.appendChild(card);
     });
 }
+
 async function getProphetData() {
     const response = await fetch(url); // request
     const data = await response.json(); // parse the JSON data
@@ -43,4 +44,4 @@ async function getProphetData() {
     displayProphets(data.prophets); // note that you reference the prophets array of the JSON data object, not just the object
   }
   
-  getProphetData();
+getProphetData();

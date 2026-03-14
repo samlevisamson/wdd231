@@ -9,9 +9,9 @@
 
 <!-- Added CSS file here -->
 <link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/directory.css">
 <link rel="stylesheet" href="styles/small.css"> 
 <link rel="stylesheet" href="styles/larger.css">
-<link rel="stylesheet" href="styles/chamber.css">
 
 <!-- Added JavaScript file here -->
 <script src="scripts/main.js" defer></script>
@@ -30,10 +30,10 @@
     <header>
 
         <!-- Added site logo using an SVG file -->
-        <img src="images/main-logo.png" alt="Site Logo">
+        <img src="images/chamber-logo.webp" alt="Site Logo">
 
         <!-- Added your name using span -->
-        <span>Mohonri Chamber of Commerce</span>
+        <span>Kovai Chamber of Commerce</span>
 
         <!-- Added hamburger icon for small screens -->
         <button class="hamburger" aria-label="Menu"> ☰ </button>
@@ -41,57 +41,33 @@
         <nav>
             <ul class="navigation">
                 <li><a href="home.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html" class="active">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <!-- 
                 <li><a href="about.html">About</a></li>
                 <li><a href="podcast.html">Podcast</a></li>
                 <li><a href="events.html">Events</a></li>
+                -->
             </ul>
         </nav>
         
     </header>
 
-   
-
     <main>
-        <!-- Added main page heading -->
-
-        <h1>Home</h1>
-
-        <div class="top-sections">
-    
-            <!-- Added first section -->
-            <section class="about">
-                <h2>About Me</h2>
-                <p>My name is Sam Levi Samson. I am studying for a Bachelor of Applied Science in Software Development and currently pursuing a certificate in Web and Computer Programming. I am taking Web Frontend Development I (WDD 231) to strengthen my frontend development skills as I work toward a career as a DevOps Engineer. You can also view the Chamber of Commerce Project and the Final Project that I built with my classmates as part of this course.
-                </p>
-            </section>
-            
-            <!-- Added second section -->
-            <section class="photo">
-                <h2>Student Photo</h2>
-                <img src="images/sam-image.webp" alt="Student Photo">
-            </section>
-        </div>    
-        <!-- Added third section -->
-        <section class="courses">
-            <h2>Web Certificate Courses</h2>
-            <div class="buttons">
-                <button id="all">All</button>
-                <button id="cse">CSE</button>
-                <button id="wdd">WDD</button>
+        <section class="directory">
+            <h1>Kovia Chamber of Commerce Directory</h1>
+        
+            <div class="menu">
+                <button id="grid" class="active">Grid</button>
+                <button id="list">List</button>
             </div>
-
-            <div id="course-container"></div>
-
-            <div class="credits">
-                <span id="totalCredits"></span>
-                <span id="completedCredits"></span>
-            </div>
-
+        
+            <div id="members" class="grid"></div>
         </section>
-
+        
+        <script src="scripts/members.js"></script>
+        
     </main>
 
     <footer>
