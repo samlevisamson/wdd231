@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="This webpage provides information about my achievemnt during my course wdd231 from web Front End Development Course.">
+<meta name="author" content="Sam Levi Samson">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="og:title" content="Sam Levi Samson">
+<meta name="og:url" content="https://github.com/samlevisamson/wdd231/index.html">
+<meta property="og:image" content="https://github.com/samlevisamson/wdd231/blob/main/images/sam-image.webp">
+
+
+<title>My Web Page</title>
+
+<!-- Added CSS file here -->
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/chamber.css">
+<link rel="stylesheet" href="styles/small.css"> 
+<link rel="stylesheet" href="styles/larger.css">
+
+<!-- Added JavaScript file here -->
+<script src="scripts/main.js" defer></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Use font weight 100 for Thin and 400 for Regular -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+
+<!-- favicon-->
+<link rel="icon" href="images/favicon.ico">
+
+</head>
+<body>
+
+    <header>
+        <!-- Added site logo using an SVG file -->
+         
+        <img src="images/chamber-logo.webp" alt="Site Logo">
+
+        <!-- Added your name using span -->
+        <span>Mohonri Chamber of Commerce</span>
+
+        <nav>
+            <ul class="navigation">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="podcast.html">Podcast</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </nav>
+
+        <!-- Added hamburger icon for small screens -->
+        <button class="hamburger" aria-label="Menu"> ☰ </button>
+
+        
+        
+    </header>
+
+ 
+
+    <main>
+
+        <!-- Hero Image -->
+
+        <section class="hero">
+            <picture>
+              <!-- Large screens -->
+              <source srcset="images/ph-hero-1024.webp" media="(min-width: 1024px)">
+              
+              <!-- Medium / Tablet screens -->
+              <source srcset="images/ph-hero-720.webp" media="(min-width: 720px)">
+              
+              <!-- Default for small/mobile screens -->
+              <img src="images/ph-hero-320.webp" alt="City Chamber of Commerce Hero Image" width="320" height="180">
+            </picture>
+          
+            <div class="hero-text">
+              <h1>Welcome to the Chamber of Commerce</h1>
+              <p>Supporting local businesses and community growth.</p>
+            </div>
+          </section>
+    
+        <!-- Added main page heading -->
+
+        <h1>Home</h1>
+
+        <div class="top-sections">
+    
+            <!-- Added first section -->
+            <section class="events">
+                <h2>Events</h2>
+                <p> Mention All the Events
+
+                </p>
+            </section>
+
+            <!-- Added second section -->
+            <section class="current-weather">
+                <h2>Current Weather</h2>
+                <img src="images/weather-icon.png" alt="Weather Icon" class="weather-icon">
+                <p> Partly Cloudy - 29°C
+                    
+                </p>
+            </section>
+            
+            <!-- Added third section -->
+            <section class="weather-forcast">
+                <h2>Weather Forcast</h2>
+                
+            </section>
+        </div>    
+
+        <!-- Added fourth section -->
+        <section class="courses">
+            <h2>Web Certificate Courses</h2>
+            <div class="buttons">
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+
+            <div id="course-container"></div>
+
+            <div class="credits">
+                <span id="totalCredits"></span>
+                <span id="completedCredits"></span>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <!-- Item 1: Social media links -->
+        <div class="social">
+            <a href="https://github.com/samlevisamson" target="_blank">
+                <img src="images/github.svg" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/sam-levi-samson-2784273b6/" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://x.com/home" target="_blank">
+                <img src="images/twitter.svg" alt="Twitter">
+            </a>
+        </div>
+    
+        <!-- Item 2: Copyright, year (dynamic), name and location -->
+        <p>
+            &copy; <span id="currentyear"></span> Sam Levi Samson | India
+        </p>
+    
+        <!-- Item 3: Last modified date -->
+        <p id="lastModified"></p>
+    
+    </footer>
+</body>
+</html>

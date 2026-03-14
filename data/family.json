@@ -1,0 +1,35 @@
+{
+    "family": {
+      "family-name": "Samson",
+      "date-family-moved-to-the-ward": "12 Aug 2021",
+      "number-of-records": "5",
+      "visited-bishop": true
+    },
+    "members": [
+      {
+        "name": "Sam Levi Samson",
+        "gender": "Male",
+        "birthday": "12 Aug 1989"
+      },
+      {
+        "name": "Kiruba Samson",
+        "gender": "Female",
+        "birthday": "06 Apr 2002"
+      },
+      {
+        "name": "Melody Hazel Samson",
+        "gender": "Female",
+        "birthday": "04 Jun 2021"
+      },
+      {
+        "name": "Symphony Sitara Samson",
+        "gender": "Female",
+        "birthday": "23 Dec 2023"
+      },
+      {
+        "name": "Ryhthm Rio Samson",
+        "gender": "Male",
+        "birthday": "18 Jan 2026"
+      }
+    ]
+  }
