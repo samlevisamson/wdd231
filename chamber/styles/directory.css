@@ -12,19 +12,18 @@
 /* Prevent content touching screen edges */
 
 body {
-    margin: 0px;
-    padding: 0;
+    margin: 0;
     font-family: "Roboto", sans-serif;
 }
 
 header {
     display: grid;
     background-color: var(--blackcolor);
-    grid-template-columns: 60px Auto Auto 50px;
-    padding: 5px 0 5px 10px;
+    grid-template-columns: 60px Auto 1fr Auto;
+    padding: 5px 10px;
     align-items:center;
     position: relative;
-    column-gap: 8px;
+    column-gap: 10px;
 }
 
 header span {
@@ -39,8 +38,7 @@ header img {
 }
 
 .navigation {
-    display:flex;
-    align-items:center;
+    justify-self: end;
     gap: 1rem;
 }
 
@@ -67,67 +65,113 @@ nav :hover {
     text-decoration: underline;
 }
 
+/* MAIN */
+
 main {
-    margin: 20px;
+    padding: 1rem;
 }
+
+main h1 {
+    text-align: center;
+}
+
+/* MENU */
 
 .menu {
     display: flex;
-    justify-content: center;
+    justify-content: center;   /* centers the buttons horizontally */
     gap: 1rem;
     margin: 1.5rem 0;
 }
 
-.menu button {
-    padding: 0.6rem 1.2rem;
-    border: none;
-    background-color: var(--buttonbackground);
-    color: var(--blackcolor);
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-/* Hover state */
-.menu button:hover {
-    background-color: var(--buttonactive);
-    color: var(--textcolor);
-}
-
-/* Active button */
 .menu button.active {
-    background-color: var(--buttonactive);
-    color: var(--textcolor);
+    background-color: var(--blackcolor);
+    color: var(--whitebackground);
 }
 
-.grid {
+/* GRID VIEW */
+
+
+
+#members.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1rem;
 }
 
-.grid section {
-    border: 1px solid #ccc;
+/* BUSINESS CARD STYLE */
+
+#members section {
+    border: 1px solid var(--bordercolor);
     padding: 1rem;
+    background: var(--whitebackground);
+    border-radius: 8px;
     text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.list {
+/* Hover effect */
+
+#members section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px var(--blackcolor);
+}
+
+/* Company logo */
+
+#members img {
+    max-width: 120px;
+    max-height: 80px;
+    object-fit: contain;
+    margin: 0.5rem auto;
     display: block;
 }
 
-.list section {
+/* Text */
+
+#members h2 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+#members p {
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+}
+
+/* Website button */
+
+#members a {
+    text-decoration: underline;
+}
+
+#members a:hover {
+    color: var(--bluecolor)
+}
+
+/* LIST VIEW */
+#members.list {
+    display: flex;
+    flex-direction: column;
+}
+
+#members.list section {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1.5fr 2fr 1fr 1.5fr 2fr;
+    align-items: center;
     padding: 1rem;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--buttonbackground);
+}
+
+#members.list img {
+    display: none;
 }
 
 /* Hamburger */
 
 
 .hamburger {
+    color: var(--whitebackground);
     display: none;
 }
 
@@ -140,6 +184,66 @@ main {
     font-size: 24px;
 }
 
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    header img {
+        width: 40px;
+    }
+
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        width: 100px;
+        flex-direction: column;
+        background-color: var(--blackcolor);
+        border-radius: 4px;
+        gap: 0;
+    }
+    
+    .navigation.open {
+        display: flex;
+    }
+
+    
+    .navigation li {
+        width: 100%;
+        
+    }
+
+    .navigation a {
+        display: block;
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    #members.list section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    #members.list h2 {
+        margin-bottom: 5px;
+    }
+
+    #members.list a {
+        margin-top: 5px;
+    }
+
+
+}
 
 /* Footer */
 
