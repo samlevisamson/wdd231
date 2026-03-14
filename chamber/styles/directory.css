@@ -18,7 +18,7 @@ body {
 
 header {
     display: grid;
-    background-color: var(--blackcolor);
+    background-color: var(--sectioncolor);
     grid-template-columns: 60px Auto 1fr Auto;
     padding: 5px 10px;
     align-items:center;
@@ -27,7 +27,7 @@ header {
 }
 
 header span {
-    color: var(--textcolor);
+    color: var(--blackcolor);
     font-size: 1.4rem;
     font-weight:normal;
 }
@@ -53,15 +53,15 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: var(--textcolor);
+    color: var(--blackcolor);
 }
 
 nav a.active {
     text-decoration: underline;
-    color: var(--whitebackground);
+    color: var(--blackcolor);
 }
 
-nav :hover {
+nav a:hover {
     text-decoration: underline;
 }
 
@@ -85,8 +85,8 @@ main h1 {
 }
 
 .menu button.active {
-    background-color: var(--blackcolor);
-    color: var(--whitebackground);
+    background-color: var(--sectioncolor);
+    color: var(--blackcolor);
 }
 
 /* GRID VIEW */
@@ -175,7 +175,7 @@ main h1 {
 
 
 .hamburger {
-    color: var(--whitebackground);
+    color: var(--blackcolor);
     display: none;
 }
 
@@ -203,7 +203,7 @@ main h1 {
         right: 10px;
         width: 100px;
         flex-direction: column;
-        background-color: var(--blackcolor);
+        background-color: var(--sectioncolor);
         border-radius: 4px;
         gap: 0;
     }
