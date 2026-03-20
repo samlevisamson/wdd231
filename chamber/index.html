@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This webpage provides information about the Home Page for Kovai of Commerce.">
+    <meta name="author" content="Sam Levi Samson">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page | Kovai Chamber of Commerce</title>
+
+    <meta property="og:title" content="Home Page | Kovai Chamber of Commerce">
+    <meta property="og:description" content="Explore the Kovai Chamber of Commerce Home Page featuring trusted companies in Coimbatore across healthcare, retail, manufacturing, and technology.">
+    <meta property="og:image" content="https://samlevisamson.github.io/wdd231/chamber/images/ph-hero-1200.webp">
+    <meta property="og:url" content="https://samlevisamson.github.io/wdd231/chamber/index.html">
+
+    <!-- Added CSS file here -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- <link rel="stylesheet" href="styles/small.css"> 
+    <link rel="stylesheet" href="styles/larger.css"> -->
+    <link rel="stylesheet" href="styles/base.css">
+
+   <!-- Java Script -->
+   <script src="scripts/base.js" defer></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Use font weight 100 for Thin and 400 for Regular -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap">
+
+    <!-- favicon-->
+    <link rel="icon" href="images/favicon.ico">
+
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+      
+          <img src="images/chamber-logo.webp" alt="Site Logo">
+      
+          <span>Kovai Chamber of Commerce</span>
+      
+          <button class="hamburger" aria-label="Menu"> ☰ </button>
+      
+          <nav>
+            <ul class="navigation">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="directory.html">Directory</a></li>
+              <li><a href="join.html">Join</a></li>
+              <li><a href="discover.html">Discover</a></li>
+            </ul>
+          </nav>
+      
+        </div>
+      </header>
+
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <picture>
+                <source srcset="images/ph-hero-1024.webp" media="(min-width: 1024px)">
+                <source srcset="images/ph-hero-720.webp" media="(min-width: 720px)">
+                <img src="images/ph-hero-320.webp" alt="Kovai Chamber of Commerce" width="320" height="180">
+            </picture>
+    
+            <div class="hero-text">
+                <h1>Kovai Chamber of Commerce</h1>
+                <p>Supporting local businesses and community growth.</p>
+    
+                <!-- CTA Button -->
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+    
+        <!-- Main Heading -->
+        <!-- <h2>Home</h2> -->
+    
+        <div class="top-sections">
+    
+            <!-- Events Section -->
+            <section class="events">
+                <h2>Upcoming Events</h2>
+                <ul>
+                    <li>Business Networking Meet - April 10</li>
+                    <li>Startup Workshop - April 18</li>
+                    <li>Trade Expo - May 5</li>
+                </ul>
+            </section>
+    
+            <!-- Current Weather -->
+            <section class="current-weather">
+                <h2>Current Weather</h2>
+                <div class="weather-container"> 
+                    <figure class="weather-left">
+                        <img id="weather-icon" src="" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                    <div class="weather-right"> 
+                        <p><strong>Temperature:</strong> <span id="current-temp"></span></p>
+                        <p><strong>High:</strong> <span id="temp-high"></span></p>
+                        <p><strong>Low:</strong> <span id="temp-low"></span></p>
+                        <p><strong>Humidity:</strong> <span id="humidity"></span></p>
+                        <p><strong>Sunrise:</strong> <span id="sunrise"></span></p>
+                        <p><strong>Sunset:</strong> <span id="sunset"></span></p>
+                    </div>
+                    
+                </div>
+                
+            </section>
+    
+            <!-- Weather Forecast -->
+            <section class="weather-forecast">
+                <h2>Weather Forecast</h2>
+                <div id = "forecast"></div>
+        
+            </section>
+    
+        </div>
+    
+        <!-- Company Spotlights -->
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+          
+            <div id="spotlight-container">
+              <!-- JS will insert cards here -->
+            </div>
+          </section>
+    
+    </main>
+
+    <footer>
+
+        <!-- Item 1: Social media links -->
+        <div class="social">
+            <a href="https://github.com/samlevisamson" target="_blank">
+                <img src="images/github.svg" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/sam-levi-samson-2784273b6/" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://x.com/home" target="_blank">
+                <img src="images/twitter.svg" alt="Twitter">
+            </a>
+        </div>
+    
+        <!-- Item 2: Copyright, year (dynamic), name and location -->
+        <p>
+            &copy; <span id="currentyear"></span> Sam Levi Samson | India
+        </p>
+    
+        <!-- Item 3: Last modified date -->
+        <p id="lastModified"></p>
+    
+    </footer>
+</body>
+</html>
