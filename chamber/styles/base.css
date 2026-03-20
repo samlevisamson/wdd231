@@ -7,8 +7,8 @@
     --blackcolor: #2A3041;
     --whitebackground: #f2f2f2;
     --bluecolor: #1e418d;
-    --blackcolor1: #2A3041;
-    --blackcolor1-rgb: 42, 48, 65;
+    /* --blackcolor1: #2A3041;
+    --blackcolor1-rgb: 42, 48, 65; */
    
 }
 
@@ -119,13 +119,13 @@ nav a:hover {
 /* Overlay text */
 .hero-text {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
 
     color: var(--textcolor);
 
-    background: rgba(var(--blackcolor1-rgb), 0.6);
+    /* background: rgba(var(--blackcolor1-rgb), 0.6); */
     
     padding: 1rem 2rem;
     border-radius: 8px;
@@ -144,10 +144,12 @@ nav a:hover {
     font-size: clamp(0.9rem, 2.5vw, 1.2rem);
 }
 
-/* CTA Button scaling */
 .cta-button {
-    display: inline-block;
-    margin-top: 1rem;
+    position: absolute;
+
+    
+    left: 50%;
+    transform: translateX(-50%);
 
     padding: clamp(8px, 1.5vw, 12px) clamp(16px, 3vw, 24px);
     font-size: clamp(0.8rem, 2vw, 1rem);
