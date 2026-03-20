@@ -7,7 +7,8 @@
     --blackcolor: #2A3041;
     --whitebackground: #f2f2f2;
     --bluecolor: #1e418d;
-    --blackcolor-rgb: 42, 48, 65;
+    --blackcolor1: #2A3041;
+    --blackcolor1-rgb: 42, 48, 65;
    
 }
 
@@ -124,7 +125,7 @@ nav a:hover {
 
     color: var(--textcolor);
 
-    background: rgba(var(--blackcolor-rgb), 0.6);
+    background: rgba(var(--blackcolor1-rgb), 0.6);
     
     padding: 1rem 2rem;
     border-radius: 8px;
