@@ -167,6 +167,9 @@ nav a:hover {
     color: var(--textcolor);
 }
 
+main h1 {
+    text-align: center;
+}
 /* ====== Top Sections (Events + Weather) ====== */
 .top-sections {
 
