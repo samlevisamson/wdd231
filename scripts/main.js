@@ -167,5 +167,67 @@ wddBtn.addEventListener("click", () => {
     setActive(wddBtn);
 });
 
+// modals
+const modal = document.querySelector("#courseModal");
+const closeModal = document.querySelector("#closeModal");
+
+const modalTitle = document.querySelector("#modalTitle");
+const modalDescription = document.querySelector("#modalDescription");
+const modalCredits = document.querySelector("#modalCredits");
+const modalTech = document.querySelector("#modalTech");
+
+function openModal(course) {
+    modalTitle.textContent = `${course.subject} ${course.number}: ${course.title}`;
+    modalDescription.textContent = course.description;
+    modalCredits.textContent = course.credits;
+    modalTech.textContent = course.technology.join(", ");
+
+    modal.showModal();
+}
+
+// Close button
+closeModal.addEventListener("click", () => {
+    modal.close();
+});
+
+// Optional: close when clicking outside
+modal.addEventListener("click", (e) => {
+    const rect = modal.getBoundingClientRect();
+    if (
+        e.clientX < rect.left ||
+        e.clientX > rect.right ||
+        e.clientY < rect.top ||
+        e.clientY > rect.bottom
+    ) {
+        modal.close();
+    }
+});
+
+function displayCourses(courseList) {
+
+    container.innerHTML = "";
+    
+    courseList.forEach(course => {
+    
+        const card = document.createElement("div");
+        card.textContent = `${course.subject} ${course.number}`;
+    
+        if (course.completed) {
+            card.classList.add("completed");
+        }
+
+        // 👉 ADD CLICK EVENT HERE
+        card.addEventListener("click", () => {
+            openModal(course);
+        });
+    
+        container.appendChild(card);
+    
+    });
+    
+    calculateCredits(courseList);
+}
+
+
 displayCourses(courses);
 setActive(allBtn);

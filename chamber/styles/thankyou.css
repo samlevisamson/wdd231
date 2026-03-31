@@ -1,0 +1,87 @@
+:root {
+    --textcolor: rgb(255, 255, 255);
+    --sectioncolor: rgb(228, 210, 172);
+    --bordercolor: rgb(70, 69, 69);
+    --buttonactive: rgb(44, 110, 73);
+    --buttonbackground: rgb(204, 204, 204);
+    --blackcolor: rgb(42, 48, 65);
+    --whitebackground: rgb(249, 249, 249);
+    --bluecolor: rgb(30, 65, 141);
+
+    /* extra reusable colors */
+    --cardbackground: rgb(255, 255, 255);
+    --dividercolor: rgb(221, 221, 221);
+    --highlightbg: rgb(238, 245, 255);
+}
+
+/* ===== Base ===== */
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: var(--whitebackground);
+}
+
+/* ===== Header ===== */
+header {
+    background-color: var(--sectioncolor);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--blackcolor);
+}
+
+/* ===== Main Layout ===== */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* ===== Card Section ===== */
+section {
+    background: var(--cardbackground);
+    border: 1px solid var(--bordercolor);
+    border-radius: 10px;
+    padding: 25px;
+    width: 100%;
+    max-width: 500px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ===== Section Title ===== */
+section h2 {
+    text-align: center;
+    color: var(--bluecolor);
+    margin-bottom: 20px;
+}
+
+/* ===== Results Styling ===== */
+#results p {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid var(--dividercolor);
+    color: var(--blackcolor);
+}
+
+#results strong {
+    color: var(--bluecolor);
+}
+
+/* ===== Highlight Membership ===== */
+#results p:nth-child(6) {
+    background-color: var(--highlightbg);
+    border-radius: 6px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    section {
+        padding: 20px;
+    }
+}
