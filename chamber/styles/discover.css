@@ -101,7 +101,14 @@ main h1 {
     text-align: center;
 }
 
+main h2 {
+    text-align: center;
+}
+
 .discover-grid {
+    max-width: 1200px;
+    min-height: 400px;
+    margin: 0 auto;
     display: grid;
     gap: 1rem;
 }
@@ -144,6 +151,7 @@ main h1 {
 }
 
 .card {
+    
     padding: 1rem;
     border: 1px solid #ccc;
     background: #fff;
