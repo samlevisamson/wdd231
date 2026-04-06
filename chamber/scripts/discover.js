@@ -29,7 +29,6 @@ const now = Date.now();
 let message;
 
 if (!lastVisit) {
-    // First visit
     message = "Welcome! Let us know if you have any questions.";
 } else {
     const diff = now - Number(lastVisit);
@@ -44,25 +43,20 @@ if (!lastVisit) {
     }
 }
 
-// Display message
 visitMsg.textContent = message;
 
-// Store current visit
+// Save visit time
 localStorage.setItem("lastVisit", now);
 
-localStorage.setItem("lastVisit", now);
-
-// Hamburger menu toggle
+// Hamburger
 const hamburger = document.querySelector(".hamburger");
 const navigation = document.querySelector(".navigation");
 
 hamburger.addEventListener("click", () => {
     navigation.classList.toggle("open");
     hamburger.classList.toggle("open");
-
 });
 
-
-// FOOTER DATES
-document.getElementById("year").textContent = new Date().getFullYear();
+// FOOTER FIXED
+document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
