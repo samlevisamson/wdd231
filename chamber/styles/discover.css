@@ -29,9 +29,7 @@ body {
     min-height: 100vh;
 }
 
-main {
-    min-height: 70vh;
-}
+
 /* Full width header background */
 header {
     background-color: var(--sectioncolor);
@@ -101,6 +99,7 @@ h1 {
 }
 
 main {
+    min-height: 70vh;
     flex: 1;
     padding: 1rem;
 }
