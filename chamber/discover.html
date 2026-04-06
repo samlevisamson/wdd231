@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This webpage provides information about the business discover.">
+    <meta name="author" content="Sam Levi Samson">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover | Kovai Chamber of Commerce</title>
+
+    <meta property="og:title" content="Business Discover| Kovai Chamber of Commerce">
+    <meta property="og:description" content="Explore the Kovai Chamber of Commerce business discover featuring trusted companies in Coimbatore across healthcare, retail, manufacturing, and technology.">
+    <meta property="og:image" content="https://samlevisamson.github.io/wdd231/chamber/images/ph-hero-1200.webp">
+    <meta property="og:url" content="https://samlevisamson.github.io/wdd231/chamber/discover.html">
+
+    <!-- Added CSS file here -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- <link rel="stylesheet" href="styles/small.css"> 
+    <link rel="stylesheet" href="styles/larger.css"> -->
+    <link rel="stylesheet" href="styles/discover.css">
+
+   <!-- Java Script -->
+   <script type="module" src="scripts/discover.js"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Use font weight 100 for Thin and 400 for Regular -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap">
+
+    <!-- favicon-->
+    <link rel="icon" href="images/favicon.ico">
+
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+      
+          <img src="images/chamber-logo.webp" alt="Site Logo">
+      
+          <span>Kovai Chamber of Commerce</span>
+      
+          <button class="hamburger" aria-label="Menu"> ☰ </button>
+      
+          <nav>
+            <ul class="navigation">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="directory.html">Directory</a></li>
+              <li><a href="join.html">Join</a></li>
+              <li><a href="discover.html" class="active">Discover</a></li>
+            </ul>
+          </nav>
+      
+        </div>
+      </header>
+
+      <main>
+
+        <h1>Discover Coimbatore</h1>
+    
+        <!-- Visitor Message -->
+        <div id="visit-message"></div>
+    
+        <!-- Cards Container -->
+        <section class="discover-grid" id="discover-grid"></section>
+    
+    </main>
+
+    <footer>
+
+        <!-- Item 1: Social media links -->
+        <div class="social">
+            <a href="https://github.com/samlevisamson" target="_blank">
+                <img src="images/github.webp" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/sam-levi-samson-2784273b6/" target="_blank">
+                <img src="images/linkedin.webp" alt="LinkedIn">
+            </a>
+            <a href="https://x.com/home" target="_blank">
+                <img src="images/twitter.webp" alt="Twitter">
+            </a>
+        </div>
+    
+        <!-- Item 2: Copyright, year (dynamic), name and location -->
+        <p>
+            &copy; <span id="currentyear"></span> Sam Levi Samson | India
+        </p>
+    
+        <!-- Item 3: Last modified date -->
+        <p id="lastModified"></p>
+    
+    </footer>
+</body>
+</html>
