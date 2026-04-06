@@ -7,24 +7,16 @@
 }
 
 /* Typography */
+/* Apply to entire site */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    margin: 20px;
-    line-height: 1.6;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400; /* normal text */
 }
 
-h1 {
-    font-family: 'Playfair Display', serif;
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-h2 {
-    font-family: 'Playfair Display', serif;
-    color: var(--primary-color);
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 700; /* bold for headings */
 }
 
 /* Sections */
