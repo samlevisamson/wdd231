@@ -13,6 +13,8 @@ places.forEach((place, index) => {
             <img 
                 src="${place.image}" 
                 alt="${place.name}" 
+                width="300" 
+                height="200"
                 ${index === 0 ? 'fetchpriority="high"' : 'loading="lazy"'}
             >
         </figure>

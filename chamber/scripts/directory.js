@@ -82,3 +82,7 @@ async function getMembers() {
 }
 
 getMembers();
+
+// FOOTER FIXED
+document.getElementById("currentyear").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;

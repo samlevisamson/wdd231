@@ -92,6 +92,10 @@ nav a:hover {
     text-decoration: underline;
 }
 
+h1 {
+    min-height: 40px;
+}
+
 main {
     flex: 1;
     padding: 1rem;
@@ -107,7 +111,7 @@ main h2 {
 
 .discover-grid {
     max-width: 1200px;
-    min-height: 400px;
+    min-height: 600px; /* reserve space */
     margin: 0 auto;
     display: grid;
     gap: 1rem;
@@ -121,6 +125,10 @@ section {
 section h2 {
     margin: 1.5rem 0 1rem;
     text-align: center;
+}
+
+img {
+    display: block;
 }
 
 /* SMALL */
@@ -153,6 +161,7 @@ section h2 {
 /* LARGE */
 @media (min-width: 1025px) {
     .discover-grid {
+        min-height: 400px;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas:
             "a b c d"
@@ -161,7 +170,7 @@ section h2 {
 }
 
 .card {
-    
+    min-height: 350px;
     padding: 1rem;
     border: 1px solid #ccc;
     background: #fff;

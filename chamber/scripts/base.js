@@ -210,3 +210,7 @@ function displaySpotlights(companies) {
         spotlightContainer.appendChild(card);
     });
 }
+
+// FOOTER FIXED
+document.getElementById("currentyear").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;

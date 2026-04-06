@@ -92,3 +92,7 @@ function closeModal(id) {
   const modal = document.getElementById(id);
   if (modal) modal.close();
 }
+
+// FOOTER FIXED
+document.getElementById("currentyear").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
