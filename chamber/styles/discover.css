@@ -8,11 +8,6 @@
     --whitebackground: rgb(242, 242, 242);
     --bluecolor: rgb(30, 65, 141);
 
-    /* Extra reusable variables */
-    --cardbackground: rgb(255, 255, 255);
-    --dividercolor: rgb(221, 221, 221);
-    --shadowcolor: rgba(0, 0, 0, 0.08);
-    --overlaycolor: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -175,8 +170,8 @@ img {
 .card {
     min-height: 350px;
     padding: 1rem;
-    border: 1px solid #ccc;
-    background: #fff;
+    border: 1px solid var(--bordercolor);
+    background: var(--whitebackground);
     border-radius: 8px;
 }
 
