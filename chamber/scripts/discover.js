@@ -3,14 +3,18 @@ import { places } from "../data/places.mjs";
 const container = document.getElementById("discover-grid");
 
 // CREATE CARDS
-places.forEach(place => {
+places.forEach((place, index) => {
     const card = document.createElement("div");
     card.classList.add("card");
 
     card.innerHTML = `
         <h2>${place.name}</h2>
         <figure>
-            <img src="${place.image}" alt="${place.name}" loading="lazy">
+            <img 
+                src="${place.image}" 
+                alt="${place.name}" 
+                ${index === 0 ? 'fetchpriority="high"' : 'loading="lazy"'}
+            >
         </figure>
         <address>${place.address}</address>
         <p>${place.description}</p>
