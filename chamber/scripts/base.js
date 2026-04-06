@@ -71,10 +71,17 @@ function displayResults(data) {
         minute: "2-digit"
     });
 
-    const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
     let desc = data.weather[0].description;
+
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', desc);
+
+    weatherIcon.setAttribute('width', '150');
+    weatherIcon.setAttribute('height', '150');
+    weatherIcon.setAttribute('fetchpriority', 'low');
+    weatherIcon.setAttribute('loading', 'lazy');
+
     captionDesc.textContent = `${desc}`;
 }
 
@@ -98,7 +105,7 @@ function displayForecast(data) {
             let temp = item.main.temp;
             let desc = item.weather[0].description;
 
-            let icon = `https://openweathermap.org/img/w/${item.weather[0].icon}.png`;
+            let icon = `https://openweathermap.org/img/wn/${item.weather[0].icon}@4x.png`;
 
             // Create container
             let row = document.createElement("div");
@@ -107,7 +114,7 @@ function displayForecast(data) {
             row.innerHTML = `
                 <span class="day">${dayName}</span>
                 <span class="desc">${desc}</span>
-                <img src="${icon}" alt="${desc}">
+                <img src="${icon}" alt="${desc}" width="40" height="40" loading="lazy">
                 <span class="temp">${temp}°C</span>
             `;
 

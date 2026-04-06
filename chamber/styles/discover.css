@@ -28,6 +28,10 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
+main {
+    min-height: 70vh;
+}
 /* Full width header background */
 header {
     background-color: var(--sectioncolor);

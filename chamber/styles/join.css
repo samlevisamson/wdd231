@@ -26,6 +26,10 @@ body {
     
 }
 
+main {
+    min-height: 70vh;
+}
+
 /* ===== Header ===== */
 header {
     background-color: var(--sectioncolor);

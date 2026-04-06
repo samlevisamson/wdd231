@@ -89,7 +89,7 @@ nav a:hover {
 /* MAIN */
 
 main {
-    flex: 1;
+    min-height: 145vh;
     padding: 1rem;
 }
 

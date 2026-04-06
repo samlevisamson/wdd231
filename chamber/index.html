@@ -60,21 +60,22 @@
         <!-- Hero Section -->
         <section class="hero">
             <picture>
-                <source srcset="images/ph-hero-1024.webp" media="(min-width: 1024px)">
+                <source srcset="images/ph-hero-1200.webp" media="(min-width: 1024px)">
                 <source srcset="images/ph-hero-720.webp" media="(min-width: 720px)">
-                <img src="images/ph-hero-320.webp" alt="Kovai Chamber of Commerce">
+                <img 
+                    src="images/ph-hero-640.webp"
+                    alt="Kovai Chamber of Commerce"
+                    width="1200"
+                    height="600"
+                    fetchpriority="high"
+                >
             </picture>
-    
+        
             <div class="hero-text">
-                <!-- <h1>Kovai Chamber of Commerce</h1>
-                <p>Supporting local businesses and community growth.</p> -->
-    
-                <!-- CTA Button -->
                 <a href="join.html" class="cta-button">Join the Chamber</a>
             </div>
-
+        
             <h1>Home</h1>
-            
         </section>
     
         <!-- Main Heading -->
@@ -97,7 +98,15 @@
                 <h2>Current Weather</h2>
                 <div class="weather-container"> 
                     <figure class="weather-left">
-                        <img id="weather-icon" src="images/weather-icon.png" alt="Weather icon">
+                        <img 
+                        id="weather-icon" 
+                        src="images/weather-icon.png" 
+                        alt="Weather icon"
+                        width="150" 
+                        height="150"
+                        loading="lazy"
+                        fetchpriority="low"
+                        >
                         <figcaption></figcaption>
                     </figure>
                     <div class="weather-right"> 
