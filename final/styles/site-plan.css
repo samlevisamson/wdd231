@@ -1,0 +1,151 @@
+/* Color Scheme */
+:root {
+    --primary-color: #2c6e49;   /* Green */
+    --accent-color: #f77f00;    /* Orange */
+    --background-color: #f4f7f6;
+    --text-color: #333;
+}
+
+/* Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+}
+
+/* Sections */
+section {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-left: 6px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+/* Accent text */
+.accent {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Wireframe styling */
+.wireframe {
+    background-color: #eaeaea;
+    padding: 10px;
+    font-family: monospace;
+    white-space: pre-line;
+    border-radius: 5px;
+}
+
+/* Wireframe Layout */
+.wireframe-mobile, .wireframe-desktop {
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Common box style */
+.box {
+    border: 2px dashed var(--primary-color);
+    padding: 15px;
+    margin: 8px 0;
+    text-align: center;
+    background-color: #fafafa;
+    font-size: 14px;
+}
+/* Hero bigger */
+.hero {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Desktop layout */
+.row {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.half {
+    flex: 1;
+}
+
+/* Header/Footer */
+.header {
+    font-weight: bold;
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Mobile Frame */
+.mobile-frame {
+    width: 260px;
+    border: 3px solid #333;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px auto;
+    background: #000;
+}
+
+.mobile-frame .wireframe {
+    background: #fff;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+/* Header with logo + hamburger */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.hamburger {
+    font-size: 18px;
+}
+
+/* Browser Frame */
+.browser-frame {
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.browser-bar {
+    background: #ddd;
+    padding: 5px;
+    display: flex;
+    gap: 5px;
+}
+
+.browser-bar span {
+    width: 12px;
+    height: 12px;
+    background: #999;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.browser-frame .wireframe {
+    padding: 10px;
+}   
