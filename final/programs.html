@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="The FitLife Club programs will help you what you are looking for and the trainer assosiated to each.">
+    <meta name="author" content="Sam Levi Samson">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page | Fitlife Club</title>
+
+    <meta property="og:title" content="Programs Page | Fitlife Club">
+    <meta property="og:description" content="Choose from our best programs and trainers at FitLife Club website, it will help you reach your health goal.">
+    <meta property="og:url" content="https://samlevisamson.github.io/wdd231/final/programs.html">
+
+    <!-- Added CSS file here -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/small.css">
+
+   <!-- Java Script -->
+   <script src="scripts/base.js" defer></script>
+   <script src="scripts/trainers.js" defer></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Use font weight 100 for Thin and 400 for Regular -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap">
+
+    <!-- favicon-->
+    <link rel="icon" href="images/favicon.ico">
+
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+      
+          <img src="images/logo.png" alt="Site Logo">
+      
+          <span>FitLife Club</span>
+      
+          <button class="hamburger" aria-label="Menu"> ☰ </button>
+      
+          <nav>
+            <ul class="navigation">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="programs.html" class="active">Programs</a></li>
+              <li><a href="join.html">Join</a></li>
+            </ul>
+          </nav>
+      
+        </div>
+      </header>
+
+
+      <main>
+    
+        <!-- Programs Section -->
+        <section class="programs-preview">
+            <h2>Our Programs</h2>
+    
+            <div class="program-grid">
+                <div class="program-card">
+                    <h3>Weight Training</h3>
+                    <p>Build strength and muscle with structured resistance training.</p>
+                </div>
+    
+                <div class="program-card">
+                    <h3>Cardio Fitness</h3>
+                    <p>Improve endurance and heart health with high-energy workouts.</p>
+                </div>
+    
+                <div class="program-card">
+                    <h3>Personal Training</h3>
+                    <p>One-on-one coaching tailored to your goals.</p>
+                </div>
+            </div>
+        
+        </section>
+    
+        <!-- Trainer Spotlight -->
+        <section class="trainers">
+            <div class="container">
+              <h2>Meet Our Trainers</h2>
+              <div id="trainer-container" class="trainer-grid"></div>
+            </div>
+        </section>
+    
+    </main>
+
+    <footer>
+
+        <!-- Item 1: Social media links -->
+        <div class="social">
+            <a href="https://github.com/samlevisamson" target="_blank">
+                <img src="images/github.webp" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/sam-levi-samson-2784273b6/" target="_blank">
+                <img src="images/linkedin.webp" alt="LinkedIn">
+            </a>
+            <a href="https://x.com/home" target="_blank">
+                <img src="images/twitter.webp" alt="Twitter">
+            </a>
+        </div>
+    
+        <!-- Item 2: Copyright, year (dynamic), name and location -->
+        <p>
+            &copy; <span id="currentyear"></span> Sam Levi Samson | India
+        </p>
+    
+        <!-- Item 3: Last modified date -->
+        <p id="lastModified"></p>
+    
+    </footer>
+</body>
+</html>

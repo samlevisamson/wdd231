@@ -1,0 +1,391 @@
+/* VARIABLES */
+:root {
+    --maingreencolor: #2c6e49;
+    --orangecolor: #F28C28;
+    --darkgraycolor: #333;
+    --lightgraycolor: #f4f7f6;
+
+    --whitebackground: #ffffff;
+    --bluecolor: #1d4ab4;
+
+    --cardbackground: #ffffff;
+    --shadowcolor: rgba(0, 0, 0, 0.1);
+
+    --blackcolor: #111;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background: var(--lightgraycolor);
+    color: var(--darkgraycolor);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* HEADER */
+header {
+    background: var(--whitebackground);
+    box-shadow: 0 2px 8px var(--shadowcolor);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 1rem;
+}
+
+/* LEFT */
+.header-inner img {
+    width: 50px;
+}
+
+.header-inner span {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+/* NAV RIGHT */
+nav {
+    margin-left: auto;
+}
+
+.navigation {
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul {
+    
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+/* LINKS */
+nav a {
+    text-decoration: none;
+    color: var(--blackcolor);
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+/* UNDERLINE EFFECT */
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--orangecolor);
+    transition: 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+/* HERO (NO CROPPING / NO DISTORTION) */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* CTA BUTTON */
+.cta-button {
+    display: inline-block;
+    background: var(--orangecolor);
+    color: var(--blackcolor);
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.cta-button:hover {
+    background: var(--bluecolor);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* =========================
+   FEATURE SLIDER
+========================= */
+
+.feature-slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 1rem;
+}
+
+.feature-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Each slide */
+.feature-card {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* 💻 Large screens: show 2 cards */
+@media (min-width: 768px) {
+    .feature-card {
+        min-width: 50%;
+    }
+}
+
+/* Image */
+.feature-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--orangecolor);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* CARDS */
+.feature-card,
+.program-card,
+.events, .programs {
+    
+    
+    background: var(--cardbackground);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadowcolor);
+}
+
+/* GRID */
+.feature-grid,
+.program-grid {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 1rem;
+
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* =========================
+   TOP SECTIONS FIX
+========================= */
+
+.top-sections {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 1rem;
+    text-align: center;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.top-sections ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* OPTIONAL: keep cards nice */
+.events {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 1rem;
+}
+
+/* =========================
+   TRAINER SECTION
+========================= */
+
+.trainers {
+    margin-top: 40px;
+}
+
+.trainers .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 1rem;
+}
+
+/* Grid Layout */
+.trainer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Card */
+.trainer-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* Hover effect (card lift) */
+.trainer-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image */
+.trainer-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.trainer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+/* Zoom effect */
+.trainer-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Info */
+.trainer-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.trainer-info h3 {
+    margin: 10px 0 5px;
+}
+
+.title {
+    color: var(--maingreencolor);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* =========================
+   FINAL CTA (FULL WIDTH BG + CENTERED CONTENT)
+========================= */
+
+.final-cta {
+    background: var(--maingreencolor);
+    width: 100%;
+}
+
+/* Inner content */
+.final-cta > * {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 1rem;
+}
+
+.final-cta {
+    background: var(--maingreencolor);
+    width: 100%;
+    padding: 40px 0;
+}
+
+.final-cta .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+    text-align: center;
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--whitebackground);
+}
+
+.social {
+    display: flex;
+    justify-content: center; /* keeps them centered */
+    gap: 15px; /* 🔥 spacing between icons */
+}
+
+.social img {
+    width: 28px;
+}
+
+/* HAMBURGER HIDDEN DESKTOP */
+.hamburger {
+    display: none;
+}

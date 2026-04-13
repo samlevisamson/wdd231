@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="The FitLife Club website will serve as a central hub for fitness enthusiasts. It will provide information about workout programs, membership plans, schedules, and trainers. The site will also guide beginners and encourage people to join and maintain a healthy lifestyle.">
+    <meta name="author" content="Sam Levi Samson">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page | Fitlife Club</title>
+
+    <meta property="og:title" content="Home Page | Fitlife Club">
+    <meta property="og:description" content="Explore The FitLife Club website, it will serve as a central hub for fitness enthusiasts.">
+    <meta property="og:image" content="https://samlevisamson.github.io/wdd231/final/images/hero1200.webp">
+    <meta property="og:url" content="https://samlevisamson.github.io/wdd231/final/index.html">
+
+    <!-- Added CSS file here -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/small.css">
+
+   <!-- Java Script -->
+   <script src="scripts/base.js" defer></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Use font weight 100 for Thin and 400 for Regular -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap">
+
+    <!-- favicon-->
+    <link rel="icon" href="images/favicon.ico">
+
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+      
+          <img src="images/logo.png" alt="Site Logo">
+      
+          <span>FitLife Club</span>
+      
+          <button class="hamburger" aria-label="Menu"> ☰ </button>
+      
+          <nav>
+            <ul class="navigation">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="programs.html">Programs</a></li>
+              <li><a href="join.html">Join</a></li>
+            </ul>
+          </nav>
+      
+        </div>
+      </header>
+
+
+      <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero1536.webp" media="(min-width: 1200px)">
+                <source srcset="images/hero1200.webp" media="(min-width: 1024px)">
+                <source srcset="images/hero1024.webp" media="(min-width: 720px)">
+                <img 
+                    src="images/hero640.webp"
+                    alt="FitLife Club Training"
+                    width="1200"
+                    height="600"
+                >
+            </picture>
+    
+            <div class="hero-overlay">
+                <h1>WELCOME TO FITLIFE CLUB</h1>
+                <p>GET FIT. STAY HEALTHY. LIVE STRONG.</p>
+                <a href="join.html" class="cta-button">GET STARTED</a>
+            </div>
+        </section>
+    
+        <section class="features">
+            <h2>Why Choose FitLife Club?</h2>
+        
+            <div class="feature-slider">
+        
+                <div class="feature-track">
+        
+                    <div class="feature-card">
+                        <img src="images/trainer.webp" alt="Expert Trainers">
+                        <h3>🏋️ Expert Trainers</h3>
+                        <p>Certified trainers to guide your fitness journey safely and effectively.</p>
+                    </div>
+        
+                    <div class="feature-card">
+                        <img src="images/programs.webp" alt="Flexible Programs">
+                        <h3>📅 Flexible Programs</h3>
+                        <p>Workout plans tailored for beginners, intermediate, and advanced levels.</p>
+                    </div>
+        
+                    <div class="feature-card">
+                        <img src="images/nutrition.webp" alt="Nutrition Guidance">
+                        <h3>🥗 Nutrition Guidance</h3>
+                        <p>Get diet tips and meal plans to complement your training.</p>
+                    </div>
+        
+                    <div class="feature-card">
+                        <img src="images/results.webp" alt="Real Results">
+                        <h3>🔥 Real Results</h3>
+                        <p>Track progress and achieve visible transformations over time.</p>
+                    </div>
+        
+                </div>
+        
+                <!-- Controls -->
+                <button class="slider-btn prev">❮</button>
+                <button class="slider-btn next">❯</button>
+        
+            </div>
+        </section>
+    
+    
+        <!-- Events + programs + Weather -->
+        <div class="top-sections">
+    
+            <!-- Events -->
+            <section class="events">
+                <h2>Upcoming Events</h2>
+                <ul>
+                    <li>🏃 Marathon - May 10</li>
+                    <li>⛰️ Mountain Climbing - May 18</li>
+                    <li>🚴 Cycling Race - May 25</li>
+                </ul>
+            </section>
+
+            <!-- Programs -->
+            <section class="programs">
+                <h2>Our Programs</h2>
+                <ul>
+                    <li>Weight Training</li>
+                    <li>Cardio Fitness</li>
+                    <li>Personal Training</li>
+                </ul>
+                <a href="programs.html" class="secondary-btn">Explore Programs</a>
+            </section>
+    
+        </div>
+    
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <div class="container">
+                <h2>Start Your Fitness Journey Today</h2>
+                <p>No excuses. No shortcuts. Just results.</p>
+                <a href="programs.html" class="cta-button">Meet Our Trainers</a>
+            </div>
+        </section>
+    
+    </main>
+
+    <footer>
+
+        <!-- Item 1: Social media links -->
+        <div class="social">
+            <a href="https://github.com/samlevisamson" target="_blank">
+                <img src="images/github.webp" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/sam-levi-samson-2784273b6/" target="_blank">
+                <img src="images/linkedin.webp" alt="LinkedIn">
+            </a>
+            <a href="https://x.com/home" target="_blank">
+                <img src="images/twitter.webp" alt="Twitter">
+            </a>
+        </div>
+    
+        <!-- Item 2: Copyright, year (dynamic), name and location -->
+        <p>
+            &copy; <span id="currentyear"></span> Sam Levi Samson | India
+        </p>
+    
+        <!-- Item 3: Last modified date -->
+        <p id="lastModified"></p>
+    
+    </footer>
+</body>
+</html>

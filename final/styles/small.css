@@ -1,0 +1,95 @@
+@media (max-width: 768px) {
+
+    /* Show hamburger on right */
+    .hamburger {
+        display: block;
+        font-size: 1.8rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-left: auto;
+        z-index: 1001;
+    }
+
+    /* Hide normal nav */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* hidden */
+        width: 150px;
+        height: 20vh;
+        background: white;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        padding-top: 60px;
+    }
+
+    /* Show menu */
+    nav.open {
+        right: 0;
+    }
+
+    /* Menu items */
+    .navigation {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .navigation li {
+        text-align: left;
+    }
+
+    .navigation a {
+        font-size: 1.2rem;
+    }
+}
+    /* HERO */
+    .hero-overlay {
+        top: 65%;
+        width: 90%;
+        padding: 1rem;
+    }
+
+    /* GRID → STACK */
+    .feature-grid,
+    .program-grid {
+        max-width: 1200px;
+        margin: auto;
+        padding: 10px 1rem;
+
+        grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 768px) {
+
+        .top-sections {
+            grid-template-columns: 1fr; /* stack */
+            padding: 10px 1rem;
+        }
+    }
+
+    /* WEATHER STACK */
+    .weather-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+
+        .spotlights {
+            padding: 10px 1rem;
+        }
+    
+        #spotlight-container {
+            grid-template-columns: 1fr; /* stack on mobile */
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .final-cta > * {
+            padding: 30px 1rem;
+        }
+    }
