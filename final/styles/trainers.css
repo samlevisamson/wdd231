@@ -120,9 +120,30 @@ main {
 
 .trainers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 15px;
-    padding: 20px;
+    
+    max-width: 1200px;
+    height: 450;
+    margin: auto;
+    padding: 10px 1rem;
+    
+
+    /* Default (mobile first) */
+    grid-template-columns: 1fr;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+    .trainers-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Desktop (🔥 your requirement) */
+@media (min-width: 1024px) {
+    .trainers-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .trainer-card {
@@ -133,8 +154,9 @@ main {
 
 .trainer-card img {
     width: 100%;
-    height: 280px;
+    height: 600px;
     object-fit: cover;
+    object-position: top;
     transition: transform 0.3s ease;
 }
 
@@ -142,6 +164,102 @@ main {
 .trainer-card:hover img {
     transform: scale(1.05);
 }
+
+/* ===============================
+   MODAL BACKDROP
+================================ */
+.trainer-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px); /* 🔥 modern glass effect */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+/* ===============================
+   MODAL BOX
+================================ */
+.trainer-modal-content {
+    background: var(--whitebackground);
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    animation: fadeInScale 0.3s ease;
+}
+
+
+/* ===============================
+   IMAGE
+================================ */
+.trainer-modal-content img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+/* ===============================
+   TEXT STYLING
+================================ */
+.trainer-modal-content h2 {
+    margin: 10px 0 5px;
+    color: var(--maingreencolor);
+}
+
+.trainer-modal-content p {
+    margin: 6px 0;
+    font-size: 0.95rem;
+}
+
+
+/* ===============================
+   CLOSE BUTTON
+================================ */
+.trainer-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    background: var(--orangecolor);
+    color: white;
+
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.trainer-close-btn:hover {
+    background: var(--maingreencolor);
+    transform: rotate(90deg);
+}
+
+
+
+
 
 /* FOOTER */
 footer {
