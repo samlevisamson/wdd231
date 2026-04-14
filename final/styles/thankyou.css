@@ -1,0 +1,258 @@
+/* VARIABLES */
+:root {
+    --maingreencolor: rgb(44, 110, 73);
+    --orangecolor: rgb(242, 140, 40);
+    --darkgraycolor: rgb(51, 51, 51);
+    --lightgraycolor: rgb(244, 247, 246);
+
+    --whitebackground: rgb(255, 255, 255);
+    --bluecolor: rgb(29, 74, 180);
+
+    --cardbackground: rgb(255, 255, 255);
+    --shadowcolor: rgba(0, 0, 0, 0.1);
+
+    --blackcolor: rgb(17, 17, 17);
+
+    --bordercolor: rgb(220, 220, 220);
+    --buttonactive: rgb(44, 110, 73);
+    --textcolor: rgb(255, 255, 255);
+    --overlaycolor: rgba(0, 0, 0, 0.4);
+}
+
+html {
+    overflow-y: scroll;
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background: var(--lightgraycolor);
+    color: var(--darkgraycolor);
+    min-height: 100vh;
+}
+
+h2 {
+    color: var(--maingreencolor);
+    text-align: center;
+    
+}
+
+/* HEADER */
+header {
+    background: var(--whitebackground);
+    box-shadow: 0 2px 8px var(--shadowcolor);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 1rem;
+}
+
+/* LEFT */
+.header-inner img {
+    width: 50px;
+}
+
+.header-inner span {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+
+/* NAV RIGHT */
+nav {
+    margin-left: auto;
+}
+
+.navigation {
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul {
+    
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+/* LINKS */
+nav a {
+    text-decoration: none;
+    color: var(--blackcolor);
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+/* UNDERLINE EFFECT */
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--orangecolor);
+    transition: 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+main {
+    min-height: 80vh;
+}
+
+/* ===== Card Section ===== */
+section {
+    
+    background: var(--cardbackground);
+    border: 1px solid var(--bordercolor);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ===== Section Title ===== */
+section h2 {
+    text-align: center;
+    color: var(--bluecolor);
+    margin-bottom: 10px;
+}
+
+
+
+/* ===== RESULTS CONTAINER ===== */
+#results {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* 🔥 spacing between each detail */
+    min-height: 220px; /* adjust if needed */
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* ===== EACH ITEM ===== */
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 14px;
+    background: var(--lightgraycolor);
+    border-radius: 6px;
+}
+
+/* ===== LABEL ===== */
+.result-item .label {
+    font-weight: 600;
+    color: var(--bluecolor);
+}
+
+/* ===== VALUE ===== */
+.result-item .value {
+    color: var(--blackcolor);
+    font-weight: 500;
+}
+
+/* ===== HIGHLIGHT MEMBERSHIP ===== */
+.result-item.membership {
+    background: #e8f1ec; /* soft green */
+    border-left: 4px solid var(--maingreencolor);
+    font-weight: 600;
+}
+
+/* ===== HOVER EFFECT (Optional but 🔥) ===== */
+.result-item:hover {
+    background: #edf5f0;
+}
+
+#results.loaded {
+    opacity: 1;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .result-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+}   
+
+.thankyou-header {
+    text-align: center;
+    padding: 30px 10px;
+    background: var(--maingreencolor);
+    color: var(--whitebackground);
+}
+
+.thankyou-main {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.summary-card {
+    background: var(--whitebackground);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadowcolor);
+    margin-bottom: 20px;
+    min-height: 320px;
+}
+
+.next-steps ul {
+    padding-left: 20px;
+    list-style: none;
+    text-align: center;
+}
+
+.cta {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn {
+    background: var(--maingreencolor);
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.btn.secondary {
+    background: var(--bluecolor);
+}
+
+footer {
+    text-align: center;
+    background: var(--whitebackground);
+    padding: 10px;
+}

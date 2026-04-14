@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Join FitLife Club and choose the perfect fitness program with expert trainers to help you achieve your health goals.">
+    <meta name="author" content="Sam Levi Samson">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Join | FitLife Club</title>
+
+    <meta property="og:title" content="Join FitLife Club">
+    <meta property="og:description" content="Start your fitness journey with FitLife Club. Explore programs and connect with expert trainers today.">
+    <meta property="og:url" content="https://samlevisamson.github.io/wdd231/final/join.html">
+    <meta property="og:type" content="website">
+
+    <!-- Added CSS file here -->
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/join-small.css">
+
+   <!-- Java Script -->
+   <script src="scripts/join.js" defer></script>
+   
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Use font weight 100 for Thin and 400 for Regular -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap">
+
+    <!-- favicon-->
+    <link rel="icon" href="images/favicon.ico">
+
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+    
+            <!-- LEFT: Logo + Name -->
+            <div class="logo">
+                <img src="images/logo.webp" alt="FitLife Club Logo">
+                <span>FitLife Club</span>
+            </div>
+    
+            <!-- RIGHT: Hamburger -->
+            <button class="hamburger" aria-label="Menu">☰</button>
+    
+            <!-- NAV -->
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
+                </ul>
+            </nav>
+    
+        </div>
+    </header>
+
+
+    
+    <main class="join-container">
+
+        <!-- ===== FORM SECTION ===== -->
+    <section class="form-section">
+        <h1>Join FitLife Club</h1>
+
+        <form method="get" action="thankyou.html">
+
+        <!-- First Name -->
+        <label>
+            First Name
+            <input type="text" name="firstname" 
+            title="Enter your first name"
+            autocomplete="given-name" required>
+        </label>
+
+        <!-- Last Name -->
+        <label>
+            Last Name
+            <input type="text" name="lastname" 
+            title="Enter your last name"
+            autocomplete="family-name" required>
+        </label>
+
+        <!-- Fitness Goal -->
+        <label>
+            Your Fitness Goal
+            <input type="text" name="goal"
+            title="e.g., Weight Loss, Muscle Gain, General Fitness"
+            placeholder="Weight Loss / Muscle Gain"
+            required>
+        </label>
+
+        <!-- Email -->
+        <label>
+            Email Address
+            <input type="email" name="email"
+            title="Enter a valid email address"
+            autocomplete="email"
+            placeholder="example@email.com" required>
+        </label>
+
+        <!-- Phone -->
+        <label>
+            Mobile Number
+            <input type="tel" name="phone"
+            title="Enter your mobile number"
+            autocomplete="tel" required>
+        </label>
+        
+        <!-- Preferred Program -->
+        <label>
+            Preferred Program
+            <select id="program" name="program" required>
+                <option value="">Select Program</option>
+            </select>
+        </label>
+
+        <!-- Trainer -->
+        <label>
+            Trainer
+            <select id="trainer" name="trainer" required>
+                <option value="">Select Trainer</option>
+            </select>
+        </label>
+
+        <!-- Timing -->
+        <label>
+            Preferred Timing
+            <input type="text" id="timing" name="timing" readonly>
+        </label>
+
+        <label>
+            Membership Plan
+            <select id="membership" name="membership" required>
+                <option value="">Select Plan</option>
+                <option value="free">1 Week Free Trial (Any Trainer)</option>
+                <option value="basic">Basic Plan - ₹999/month</option>
+                <option value="standard">Standard Plan - ₹1,999/month</option>
+                <option value="premium">Premium Plan - ₹3,499/month</option>
+                <option value="elite">Elite Plan - ₹5,999/month</option>
+            </select>
+        </label>
+
+        <!-- Experience Level -->
+        <label>
+            Fitness Level
+            <select name="level" required>
+            <option value="">Select Level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+            </select>
+        </label>
+
+        <!-- Notes -->
+        <label>
+            Additional Notes
+            <textarea name="notes" 
+            title="Any injuries, preferences, or goals"></textarea>
+        </label>
+
+        <!-- Hidden Timestamp -->
+        <input type="hidden" id="timestamp" name="timestamp">
+
+        <!-- Submit -->
+        <input type="submit" value="Start Your Fitness Journey">
+
+        </form>
+</section>
+        
+        
+        <!-- ===== MEMBERSHIP CARDS ===== -->
+<section class="cards-section">
+
+    <h2 class="membership-heading">Choose Your Membership</h2>
+    
+    <div class="card">
+        <h3>Free Trial</h3>
+        
+        <button type="button" data-modal="freeTrail">Get Started</button>
+    </div>
+
+
+    <div class="card">
+        <h3>Basic Plan</h3>
+        
+        <button type="button" data-modal="basicModal">View Benefits</button>
+    </div>
+    
+    <div class="card">
+        <h3>Standard Plan</h3>
+        
+        <button type="button" data-modal="standardModal">View Benefits</button>
+    </div>
+    
+    <div class="card featured">
+        <h3>Premium Plan</h3>
+        
+        <button type="button" data-modal="premiumModal">View Benefits</button>
+    </div>
+    
+    <div class="card">
+        <h3>Elite Plan</h3>
+        
+        <button type="button" data-modal="eliteModal">View Benefits</button>
+    </div>
+    
+</section>
+        
+</main>
+
+<dialog id="freeTrail">
+    <h3>Free Trail - One Week</h3>
+    <ul>
+        <li>1 Week Free</li>
+        <li>Try any program with any trainer</li>
+    </ul>
+    <button class="close-btn">Close</button>
+</dialog>
+
+<dialog id="basicModal">
+    <h3>Basic Plan - ₹999/month</h3>
+    <ul>
+        <li>Full access to gym equipment</li>
+        <li>Cardio zone access</li>
+        <li>Locker facility</li>
+    </ul>
+    <button class="close-btn">Close</button>
+</dialog>
+
+<dialog id="standardModal">
+    <h3>Standard Plan - ₹1,999/month</h3>
+    <ul>
+        <li>All Basic Plan features</li>
+        <li>Access to group classes (Yoga, HIIT)</li>
+        <li>Weekly fitness routine guidance</li>
+    </ul>
+    <button class="close-btn">Close</button>
+</dialog>
+
+<dialog id="premiumModal">
+    <h3>Premium Plan - ₹3,499/month</h3>
+    <ul>
+        <li>All Standard Plan features</li>
+        <li>Personal trainer sessions</li>
+        <li>Customized workout plan</li>
+        <li>Basic diet guidance</li>
+    </ul>
+    <button class="close-btn">Close</button>
+</dialog>
+
+<dialog id="eliteModal">
+    <h3>Elite Plan - ₹5,999/month</h3>
+    <ul>
+        <li>All Premium Plan features</li>
+        <li>Priority trainer booking</li>
+        <li>Flexible workout timings</li>
+        <li>Advanced transformation support</li>
+    </ul>
+    <button class="close-btn">Close</button>
+</dialog>
+    
+        
+    <footer>
+
+        <!-- Item 1: Social media links -->
+        <div class="social">
+            <a href="https://github.com/samlevisamson" target="_blank">
+                <img src="images/github.webp" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/sam-levi-samson-2784273b6/" target="_blank">
+                <img src="images/linkedin.webp" alt="LinkedIn">
+            </a>
+            <a href="https://x.com/home" target="_blank">
+                <img src="images/twitter.webp" alt="Twitter">
+            </a>
+        </div>
+    
+        <!-- Item 2: Copyright, year (dynamic), name and location -->
+        <p>
+            &copy; <span id="currentyear"></span> Sam Levi Samson | India
+        </p>
+    
+        <!-- Item 3: Last modified date -->
+        <p id="lastModified"></p>
+    
+    </footer>
+</body>
+</html>
