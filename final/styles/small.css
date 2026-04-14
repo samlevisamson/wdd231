@@ -46,10 +46,81 @@
     }
 }
     /* HERO */
-    .hero-overlay {
-        top: 65%;
-        width: 90%;
-        padding: 1rem;
+
+    .hero {
+        position: relative;
+        overflow: hidden;
+    }
+
+    
+
+    @media (max-width: 640px) {
+        .hero img {
+            width: 100%;
+            height: auto;   /* ✅ maintains aspect ratio */
+            display: block;
+        }
+        .hero-overlay {
+            height: 80px;
+            width: 90%;
+            padding: 0.8rem;
+        }
+    
+        .hero-overlay h1 {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 640px) {
+
+        .hero-overlay .line-one {
+            font-size: 0.8rem;
+        }
+    
+        .hero-overlay .line-two {
+            font-size: 1.4rem;
+        }
+    }
+    /* =========================
+    PROGRAMS (MOBILE FIRST)
+    ========================= */
+
+    .programs-preview {
+        padding: 20px 0;
+    }
+
+    .program-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* 🔥 always 1 column on mobile */
+        gap: 15px;
+        padding: 0 1rem;
+    }
+
+    /* CARD */
+    .program-card {
+        background: var(--cardbackground);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px var(--shadowcolor);
+        text-align: center;
+    }
+
+    /* IMAGE */
+    .program-card img {
+        width: 100%;
+        height: 160px; /* slightly smaller for mobile */
+        object-fit: cover;
+    }
+
+    /* TEXT */
+    .program-card h3 {
+        font-size: 1.1rem;
+        margin: 10px 0 5px;
+    }
+
+    .program-card p {
+        font-size: 0.9rem;
+        padding: 0 10px 15px;
     }
 
     /* GRID → STACK */
@@ -70,26 +141,9 @@
         }
     }
 
-    /* WEATHER STACK */
-    .weather-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    @media (max-width: 768px) {
-
-        .spotlights {
-            padding: 10px 1rem;
-        }
-    
-        #spotlight-container {
-            grid-template-columns: 1fr; /* stack on mobile */
-        }
-    }
-
-    @media (max-width: 768px) {
-
-        .final-cta > * {
-            padding: 30px 1rem;
+    /* TRAINER CARDS */
+    @media (min-width: 768px) {
+        .trainer-grid {
+            grid-template-columns: repeat(2, 1fr);
         }
     }

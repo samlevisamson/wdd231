@@ -13,7 +13,9 @@
 
     <!-- Added CSS file here -->
     <link rel="stylesheet" href="styles/programs.css">
-    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/programs-small.css">
+    
+    
 
    <!-- Java Script -->
    <script src="scripts/programs.js" defer></script>
@@ -33,23 +35,27 @@
 <body>
     <header>
         <div class="header-inner">
-      
-          <img src="images/logo.png" alt="Site Logo">
-      
-          <span>FitLife Club</span>
-      
-          <button class="hamburger" aria-label="Menu"> ☰ </button>
-      
-          <nav>
-            <ul class="navigation">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="programs.html" class="active">Programs</a></li>
-              <li><a href="join.html">Join</a></li>
-            </ul>
-          </nav>
-      
+    
+            <!-- LEFT: Logo + Name -->
+            <div class="logo">
+                <img src="images/logo.webp" alt="FitLife Club Logo">
+                <span>FitLife Club</span>
+            </div>
+    
+            <!-- RIGHT: Hamburger -->
+            <button class="hamburger" aria-label="Menu">☰</button>
+    
+            <!-- NAV -->
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs.html" class="active">Programs</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+    
         </div>
-      </header>
+    </header>
 
 
       <main>
@@ -60,20 +66,6 @@
         
             <div id="program-container" class="program-grid"></div>
         </section>
-
-        <div id="program-modal" class="modal">
-            <div class="modal-content">
-              <span class="close-btn">&times;</span>
-          
-              <img id="modal-image" src="" alt="">
-              <h2 id="modal-title"></h2>
-          
-              <p id="modal-details"></p>
-              <p><strong>Who it's for:</strong> <span id="modal-audience"></span></p>
-              <p><strong>Timings:</strong> <span id="modal-timing"></span></p>
-              <p><strong>Trainer:</strong> <span id="modal-trainer"></span></p>
-            </div>
-          </div>
     
         <!-- Trainer Spotlight -->
         <section class="trainers">
@@ -84,6 +76,20 @@
         </section>
     
     </main>
+
+    <div id="program-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+      
+          <img id="modal-image" src="" alt="">
+          <h2 id="modal-title"></h2>
+      
+          <p id="modal-details"></p>
+          <p><strong>Who it's for:</strong> <span id="modal-audience"></span></p>
+          <p><strong>Timings:</strong> <span id="modal-timing"></span></p>
+          <p><strong>Trainer:</strong> <span id="modal-trainer"></span></p>
+        </div>
+      </div>
 
     <footer>
 

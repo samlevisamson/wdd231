@@ -58,6 +58,12 @@ header {
     margin-left: 10px;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 /* NAV RIGHT */
 nav {
     margin-left: auto;
@@ -112,19 +118,46 @@ nav a.active::after {
 
 .hero {
     position: relative;
+    overflow: hidden;
 }
 
 .hero-overlay {
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
+    width: 80%;
+    max-width: 400px;
+
     background: rgba(0,0,0,0.5);
-    color: rgb(255, 255, 255);
-    padding: 1.5rem;
+    color: white;
+    padding: 1rem;
     border-radius: 10px;
     text-align: center;
+}
+
+.hero-overlay h1 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* First line */
+.hero-overlay .line-one {
+    display: block;
+    font-size: 1rem;   /* medium */
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+/* Second line */
+.hero-overlay .line-two {
+    display: block;
+    font-size: 2rem;   /* large */
+    font-weight: 700;
+    color: var(--orangecolor)
 }
 
 /* CTA BUTTON */
@@ -234,6 +267,34 @@ nav a.active::after {
     gap: 20px;
 }
 
+.programs ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 🔥 controls spacing */
+    padding: 0;
+}
+
+.secondary-btn {
+    color: var(--bluecolor);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+.secondary-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background: var(--bluecolor);
+    transition: 0.3s;
+}
+
+.secondary-btn:hover::after {
+    width: 100%;
+}
 /* =========================
    TOP SECTIONS FIX
 ========================= */
@@ -252,7 +313,7 @@ nav a.active::after {
 .top-sections ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 1;
 }
 
 /* OPTIONAL: keep cards nice */

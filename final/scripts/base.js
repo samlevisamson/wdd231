@@ -59,6 +59,20 @@ window.addEventListener("resize", () => {
 });
 
 // ===============================
+// LAZY LOADING (FEATURE SLIDER)
+// ===============================
+const featureImages = document.querySelectorAll(".feature-img");
+
+featureImages.forEach((img, index) => {
+    if (index === 0) {
+        img.setAttribute("fetchpriority", "high"); // 🔥 first image
+    } else {
+        img.setAttribute("loading", "lazy");       // lazy load others
+        img.setAttribute("decoding", "async");     // smoother rendering
+    }
+});
+
+// ===============================
 // FOOTER DATES
 // ===============================
 const year = document.getElementById("currentyear");
