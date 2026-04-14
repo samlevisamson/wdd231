@@ -1,0 +1,166 @@
+/* VARIABLES */
+:root {
+    --maingreencolor: rgb(44, 110, 73);
+    --orangecolor: rgb(242, 140, 40);
+    --darkgraycolor: rgb(51, 51, 51);
+    --lightgraycolor: rgb(244, 247, 246);
+
+    --whitebackground: rgb(255, 255, 255);
+    --bluecolor: rgb(29, 74, 180);
+
+    --cardbackground: rgb(255, 255, 255);
+    --shadowcolor: rgba(0, 0, 0, 0.1);
+
+    --blackcolor: rgb(17, 17, 17);
+}
+
+html {
+    overflow-y: scroll;
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background: var(--lightgraycolor);
+    color: var(--darkgraycolor);
+    min-height: 100vh;
+}
+
+h2 {
+    color: var(--maingreencolor);
+    text-align: center;
+    
+}
+
+/* HEADER */
+header {
+    background: var(--whitebackground);
+    box-shadow: 0 2px 8px var(--shadowcolor);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 1rem;
+}
+
+/* LEFT */
+.header-inner img {
+    width: 50px;
+}
+
+.header-inner span {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+
+/* NAV RIGHT */
+nav {
+    margin-left: auto;
+}
+
+.navigation {
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul {
+    
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+/* LINKS */
+nav a {
+    text-decoration: none;
+    color: var(--blackcolor);
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+/* UNDERLINE EFFECT */
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--orangecolor);
+    transition: 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+main {
+    min-height: 80vh;
+}
+
+
+.trainers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.trainer-card {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.trainer-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Zoom Effect 🔥 */
+.trainer-card:hover img {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--whitebackground);
+}
+
+.social {
+    display: flex;
+    justify-content: center; /* keeps them centered */
+    gap: 15px; /* 🔥 spacing between icons */
+}
+
+.social img {
+    width: 28px;
+}
+
+/* HAMBURGER HIDDEN DESKTOP */
+.hamburger {
+    display: none;
+}

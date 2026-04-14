@@ -1,7 +1,4 @@
-const BASE_TRAINER_URL =
-  location.hostname === "127.0.0.1" || location.hostname === "localhost"
-    ? "/images/trainers/"
-    : "https://samlevisamson.github.io/wdd231/final/images/trainers/";
+
 
 // ===============================
 // HAMBURGER MENU
@@ -132,95 +129,6 @@ window.addEventListener("click", (e) => {
   if (e.target === modal) {
     modal.classList.remove("show");
     document.body.classList.remove("blur");
-  }
-});
-
-/// ===============================
-// TRAINERS (IMAGE ONLY + MODAL)
-// ===============================
-const TRAINER_URL = "https://samlevisamson.github.io/wdd231/final/data/trainers.json";
-
-const trainerModal = document.getElementById("trainer-modal");
-const trainerCloseBtn = document.querySelector(".trainer-close-btn");
-
-async function loadTrainers() {
-  try {
-    const response = await fetch(TRAINER_URL);
-    const trainers = await response.json();
-
-    const container = document.getElementById("trainers-container");
-
-    if (!container) return; // 🔥 safety check
-
-    // ✅ Generate trainer cards
-    container.innerHTML = trainers.map((trainer, index) => `
-      <div class="trainer-card" data-index="${index}">
-        <img 
-          src="${BASE_TRAINER_URL + trainer.image}" 
-          alt="${trainer.first_name}"
-          class="trainer-img"
-          loading="lazy"
-        >
-      </div>
-    `).join("");
-
-    // ✅ Add click event
-    container.addEventListener("click", (e) => {
-      const card = e.target.closest(".trainer-card");
-      if (!card) return;
-
-      const index = card.dataset.index;
-      openTrainerModal(trainers[index]);
-    });
-
-  } catch (error) {
-    console.error("Error loading trainers:", error);
-  }
-}
-
-loadTrainers();
-
-// ===============================
-// OPEN MODAL
-// ===============================
-function openTrainerModal(trainer) {
-  if (!trainerModal) return;
-
-  document.getElementById("trainer-modal-img").src =
-    BASE_TRAINER_URL + trainer.image;
-
-  document.getElementById("trainer-modal-name").textContent =
-    `${trainer.first_name} ${trainer.last_name}`;
-
-  document.getElementById("trainer-modal-title").textContent =
-    trainer.title;
-
-  document.getElementById("trainer-modal-availability").textContent =
-    trainer.availability;
-
-  document.getElementById("trainer-modal-contact").textContent =
-    trainer.contact_number;
-
-  trainerModal.classList.add("show");
-  document.body.classList.add("blur");
-}
-
-// ===============================
-// CLOSE MODAL
-// ===============================
-if (trainerCloseBtn) {
-  trainerCloseBtn.addEventListener("click", closeTrainerModal);
-}
-
-function closeTrainerModal() {
-  trainerModal.classList.remove("show");
-  document.body.classList.remove("blur");
-}
-
-// Close on outside click
-window.addEventListener("click", (e) => {
-  if (e.target === trainerModal) {
-    closeTrainerModal();
   }
 });
 

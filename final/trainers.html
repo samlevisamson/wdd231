@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="The FitLife Club programs will help you what you are looking for and the trainer assosiated to each.">
+    <meta name="description" content="The FitLife Club Trainers will help you reach your health goal.">
     <meta name="author" content="Sam Levi Samson">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programs Page | FitLife Club</title>
+    <title>Trainers Page | FitLife Club</title>
 
-    <meta property="og:title" content="Programs Page | Fitlife Club">
-    <meta property="og:description" content="Choose from our best programs and trainers at FitLife Club website, it will help you reach your health goal.">
-    <meta property="og:url" content="https://samlevisamson.github.io/wdd231/final/programs.html">
+    <meta property="og:title" content="Trainers Page | Fitlife Club">
+    <meta property="og:description" content="Choose among our best trainers at FitLife Club, they will help you reach your health goal.">
+    <meta property="og:url" content="https://samlevisamson.github.io/wdd231/final/trainers.html">
 
     <!-- Added CSS file here -->
-    <link rel="stylesheet" href="styles/programs.css">
-    <link rel="stylesheet" href="styles/programs-small.css">
+    <link rel="stylesheet" href="styles/trainers.css">
+    <link rel="stylesheet" href="styles/trainers-small.css">
     
     
 
    <!-- Java Script -->
-   <script src="scripts/programs.js" defer></script>
+   <script src="scripts/trainers.js" defer></script>
    
 
     <!-- Fonts -->
@@ -49,8 +49,8 @@
             <nav>
                 <ul class="navigation">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="programs.html" class="active">Programs</a></li>
-                    <li><a href="trainers.html">Trainers</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="trainers.html" class="active">Trainers</a></li>
                     <li><a href="join.html">Join</a></li>
                 </ul>
             </nav>
@@ -61,26 +61,28 @@
 
       <main>
     
-        <!-- Programs Section -->
-        <section class="programs-preview">
-            <h2>Our Programs</h2>
-        
-            <div id="program-container" class="program-grid"></div>
-        </section>
+    
+        <!-- Trainer Spotlight -->
+        <section class="trainers-section">
+            <h2>Meet Our Trainers</h2>
+          
+            <div id="trainers-container" class="trainers-grid"></div>
+          </section>
+          
     
     </main>
 
-    <div id="program-modal" class="modal">
-        <div class="modal-content">
-          <span class="close-btn">&times;</span>
+      <div id="trainer-modal" class="trainer-modal">
+        <div class="trainer-modal-content">
+          <span class="trainer-close-btn">&times;</span>
       
-          <img id="modal-image" src="" alt="">
-          <h2 id="modal-title"></h2>
-      
-          <p id="modal-details"></p>
-          <p><strong>Who it's for:</strong> <span id="modal-audience"></span></p>
-          <p><strong>Timings:</strong> <span id="modal-timing"></span></p>
-          <p><strong>Trainer:</strong> <span id="modal-trainer"></span></p>
+          <img id="trainer-modal-img" src="" alt="">
+          
+          <h2 id="trainer-modal-name"></h2>
+
+          <p id="trainer-modal-title"></p>
+          <p id="trainer-modal-availability"></p>
+          <p id="trainer-modal-contact"></p>
         </div>
       </div>
 
