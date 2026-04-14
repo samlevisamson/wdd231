@@ -1,3 +1,8 @@
+const BASE_TRAINER_URL =
+  location.hostname === "127.0.0.1" || location.hostname === "localhost"
+    ? "/images/trainers/"
+    : "https://samlevisamson.github.io/wdd231/final/images/trainers/";
+
 // ===============================
 // HAMBURGER MENU
 // ===============================
@@ -130,7 +135,7 @@ window.addEventListener("click", (e) => {
   }
 });
 
-// ===============================
+/// ===============================
 // TRAINERS (IMAGE ONLY + MODAL)
 // ===============================
 const TRAINER_URL = "https://samlevisamson.github.io/wdd231/final/data/trainers.json";
@@ -143,38 +148,44 @@ async function loadTrainers() {
     const response = await fetch(TRAINER_URL);
     const trainers = await response.json();
 
-    const cards = document.querySelectorAll(".trainer-card");
+    const container = document.getElementById("trainers-container");
 
-    cards.forEach((card, index) => {
-      const trainer = trainers[index];
-      if (!trainer) return;
+    if (!container) return; // 🔥 safety check
 
-      // 👇 ONLY IMAGE
-      card.innerHTML = `
+    // ✅ Generate trainer cards
+    container.innerHTML = trainers.map((trainer, index) => `
+      <div class="trainer-card" data-index="${index}">
         <img 
           src="${BASE_TRAINER_URL + trainer.image}" 
           alt="${trainer.first_name}"
           class="trainer-img"
           loading="lazy"
         >
-      `;
+      </div>
+    `).join("");
 
-      // 👇 CLICK → OPEN MODAL
-      card.addEventListener("click", () => openTrainerModal(trainer));
+    // ✅ Add click event
+    container.addEventListener("click", (e) => {
+      const card = e.target.closest(".trainer-card");
+      if (!card) return;
+
+      const index = card.dataset.index;
+      openTrainerModal(trainers[index]);
     });
 
   } catch (error) {
-    console.error(error);
+    console.error("Error loading trainers:", error);
   }
 }
 
 loadTrainers();
 
-
 // ===============================
 // OPEN MODAL
 // ===============================
 function openTrainerModal(trainer) {
+  if (!trainerModal) return;
+
   document.getElementById("trainer-modal-img").src =
     BASE_TRAINER_URL + trainer.image;
 
@@ -197,15 +208,19 @@ function openTrainerModal(trainer) {
 // ===============================
 // CLOSE MODAL
 // ===============================
-trainerCloseBtn.addEventListener("click", () => {
+if (trainerCloseBtn) {
+  trainerCloseBtn.addEventListener("click", closeTrainerModal);
+}
+
+function closeTrainerModal() {
   trainerModal.classList.remove("show");
   document.body.classList.remove("blur");
-});
+}
 
+// Close on outside click
 window.addEventListener("click", (e) => {
   if (e.target === trainerModal) {
-    trainerModal.classList.remove("show");
-    document.body.classList.remove("blur");
+    closeTrainerModal();
   }
 });
 
