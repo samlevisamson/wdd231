@@ -3,7 +3,7 @@
       "first_name": "Rahul",
       "last_name": "Sharma",
       "title": "Strength Coach",
-      "image": "https://samlevisamson.github.io/wdd231/images/trainers/rahul.webp",
+      "image": "https://samlevisamson.github.io/wdd231/final/images/trainers/rahul.webp",
       "availability": "Mon-Sat, 6:00 AM - 10:00 AM",
       "contact_number": "+91 98765 43210"
     },
@@ -11,7 +11,7 @@
       "first_name": "Hasan",
       "last_name": "Khan",
       "title": "Personal Trainer",
-      "image": "https://samlevisamson.github.io/wdd231/images/trainers/hasan.webp",
+      "image": "https://samlevisamson.github.io/wdd231/final/images/trainers/hasan.webp",
       "availability": "Mon-Fri, 5:00 PM - 9:00 PM",
       "contact_number": "+91 91234 56789"
     },
@@ -19,7 +19,7 @@
       "first_name": "Lisa",
       "last_name": "Morgan",
       "title": "Yoga Trainer",
-      "image": "https://samlevisamson.github.io/wdd231/images/trainers/lisa.webp",
+      "image": "https://samlevisamson.github.io/wdd231/final/images/trainers/lisa.webp",
       "availability": "Daily, 6:00 AM - 8:00 AM",
       "contact_number": "+91 99887 66554"
     },
@@ -27,7 +27,7 @@
       "first_name": "Neha",
       "last_name": "Sinha",
       "title": "Wellness Coach",
-      "image": "https://samlevisamson.github.io/wdd231/images/trainers/neha.webp",
+      "image": "https://samlevisamson.github.io/wdd231/final/images/trainers/neha.webp",
       "availability": "Mon-Sat, 10:00 AM - 2:00 PM",
       "contact_number": "+91 97654 32109"
     },
@@ -35,7 +35,7 @@
       "first_name": "Omar",
       "last_name": "Ali",
       "title": "Fitness Instructor",
-      "image": "https://samlevisamson.github.io/wdd231/images/trainers/omar.webp",
+      "image": "https://samlevisamson.github.io/wdd231/final/images/trainers/omar.webp",
       "availability": "Mon-Sun, 7:00 AM - 11:00 AM",
       "contact_number": "+91 90123 45678"
     }

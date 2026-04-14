@@ -1,0 +1,264 @@
+/* VARIABLES */
+:root {
+    --maingreencolor: rgb(44, 110, 73);
+    --orangecolor: rgb(242, 140, 40);
+    --darkgraycolor: rgb(51, 51, 51);
+    --lightgraycolor: rgb(244, 247, 246);
+
+    --whitebackground: rgb(255, 255, 255);
+    --bluecolor: rgb(29, 74, 180);
+
+    --cardbackground: rgb(255, 255, 255);
+    --shadowcolor: rgba(0, 0, 0, 0.1);
+
+    --blackcolor: rgb(17, 17, 17);
+}
+
+html {
+    overflow-y: scroll;
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background: var(--lightgraycolor);
+    color: var(--darkgraycolor);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* HEADER */
+header {
+    background: var(--whitebackground);
+    box-shadow: 0 2px 8px var(--shadowcolor);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 1rem;
+}
+
+/* LEFT */
+.header-inner img {
+    width: 50px;
+}
+
+.header-inner span {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+/* NAV RIGHT */
+nav {
+    margin-left: auto;
+}
+
+.navigation {
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul {
+    
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+/* LINKS */
+nav a {
+    text-decoration: none;
+    color: var(--blackcolor);
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+/* UNDERLINE EFFECT */
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--orangecolor);
+    transition: 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+/* PROGRAM CARDS */
+/* MODAL CARDS */
+
+/* BACKGROUND BLUR */
+body.blur {
+    overflow: hidden;
+}
+
+body.blur main,
+body.blur header,
+body.blur footer {
+    filter: blur(5px);
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+/* CONTENT */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+/* IMAGE */
+.modal-content img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 1rem;
+}
+
+/* =========================
+   TRAINER SECTION
+========================= */
+
+.trainers {
+    margin-top: 40px;
+}
+
+.trainers .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 1rem;
+}
+
+/* Grid Layout */
+.trainer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Card */
+.trainer-card {
+    background: rgb(255, 255, 255);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* Hover effect (card lift) */
+.trainer-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image */
+.trainer-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.trainer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+/* Zoom effect */
+.trainer-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Info */
+.trainer-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.trainer-info h3 {
+    margin: 10px 0 5px;
+}
+
+.title {
+    color: var(--maingreencolor);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--whitebackground);
+}
+
+.social {
+    display: flex;
+    justify-content: center; /* keeps them centered */
+    gap: 15px; /* 🔥 spacing between icons */
+}
+
+.social img {
+    width: 28px;
+}
+
+/* HAMBURGER HIDDEN DESKTOP */
+.hamburger {
+    display: none;
+}

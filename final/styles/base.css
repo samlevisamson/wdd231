@@ -1,17 +1,17 @@
 /* VARIABLES */
 :root {
-    --maingreencolor: #2c6e49;
-    --orangecolor: #F28C28;
-    --darkgraycolor: #333;
-    --lightgraycolor: #f4f7f6;
+    --maingreencolor: rgb(44, 110, 73);
+    --orangecolor: rgb(242, 140, 40);
+    --darkgraycolor: rgb(51, 51, 51);
+    --lightgraycolor: rgb(244, 247, 246);
 
-    --whitebackground: #ffffff;
-    --bluecolor: #1d4ab4;
+    --whitebackground: rgb(255, 255, 255);
+    --bluecolor: rgb(29, 74, 180);
 
-    --cardbackground: #ffffff;
+    --cardbackground: rgb(255, 255, 255);
     --shadowcolor: rgba(0, 0, 0, 0.1);
 
-    --blackcolor: #111;
+    --blackcolor: rgb(17, 17, 17);
 }
 
 html {
@@ -121,7 +121,7 @@ nav a.active::after {
     transform: translate(-50%, -50%);
 
     background: rgba(0,0,0,0.5);
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
@@ -142,7 +142,7 @@ nav a.active::after {
 /* HOVER EFFECT */
 .cta-button:hover {
     background: var(--bluecolor);
-    color: white;
+    color: rgb(255, 255, 255);
     transform: scale(1.05);
 }
 
@@ -192,7 +192,7 @@ nav a.active::after {
     top: 50%;
     transform: translateY(-50%);
     background: var(--orangecolor);
-    color: white;
+    color: rgb(255, 255, 255);
     border: none;
     padding: 10px 15px;
     cursor: pointer;
@@ -257,7 +257,7 @@ nav a.active::after {
 
 /* OPTIONAL: keep cards nice */
 .events {
-    background: white;
+    background: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -269,74 +269,6 @@ nav a.active::after {
     padding: 10px 1rem;
 }
 
-/* =========================
-   TRAINER SECTION
-========================= */
-
-.trainers {
-    margin-top: 40px;
-}
-
-.trainers .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 10px 1rem;
-}
-
-/* Grid Layout */
-.trainer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-/* Card */
-.trainer-card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-/* Hover effect (card lift) */
-.trainer-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Image */
-.trainer-image {
-    height: 250px;
-    overflow: hidden;
-}
-
-.trainer-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.3s;
-}
-
-/* Zoom effect */
-.trainer-card:hover img {
-    transform: scale(1.05);
-}
-
-/* Info */
-.trainer-info {
-    padding: 15px;
-    text-align: center;
-}
-
-.trainer-info h3 {
-    margin: 10px 0 5px;
-}
-
-.title {
-    color: var(--maingreencolor);
-    font-weight: bold;
-    margin-bottom: 5px;
-}
 
 /* =========================
    FINAL CTA (FULL WIDTH BG + CENTERED CONTENT)
@@ -365,7 +297,7 @@ nav a.active::after {
     margin: auto;
     padding: 0 1rem;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 /* FOOTER */
