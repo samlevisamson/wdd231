@@ -142,16 +142,22 @@ async function loadTrainers() {
     const response = await fetch(url);
     const trainers = await response.json();
 
-    container.innerHTML = trainers.map(trainer => `
-      <div class="trainer-card">
-        
+    // 🔥 Select existing placeholder cards
+    const cards = document.querySelectorAll(".trainer-card");
+
+    cards.forEach((card, index) => {
+      const trainer = trainers[index];
+      if (!trainer) return;
+
+      card.innerHTML = `
         <div class="trainer-image">
           <img 
             src="${trainer.image}" 
             alt="${trainer.first_name}"
             width="300"
-            height="300"
+            height="220"
             loading="lazy"
+            decoding="async"
           >
         </div>
 
@@ -161,12 +167,10 @@ async function loadTrainers() {
           <p>${trainer.availability}</p>
           <p>${trainer.contact_number}</p>
         </div>
-
-      </div>
-    `).join("");
+      `;
+    });
 
   } catch (error) {
-    container.innerHTML = "<p>Failed to load trainers.</p>";
     console.error(error);
   }
 }

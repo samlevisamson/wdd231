@@ -117,6 +117,12 @@ main {
     min-height: 80vh;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 section {
     padding: 5px 0;
 }
@@ -150,7 +156,7 @@ section {
 /* 💻 Desktop (KEEP 2 ONLY) */
 @media (min-width: 1024px) {
     .program-grid {
-        grid-template-columns: repeat(2s, 1fr); /* 🔥 force 2 */
+        grid-template-columns: repeat(2, 1fr); /* 🔥 force 2 */
     }
 }
 
@@ -286,96 +292,7 @@ body.blur footer {
     padding: 10px 1rem;
 }
 
-/* =========================
-   TRAINER SECTION
-========================= */
 
-.trainers {
-    margin-top: 40px;
-}
-
-.trainers .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 10px 1rem;
-}
-
-.trainer-grid {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr;
-    align-items: stretch;
-    min-height: 500px;
-}
-
-/* 📱 Tablet */
-@media (min-width: 720px) {
-    .trainer-grid {
-        grid-template-columns: repeat(3, 1fr);
-        min-height: 600px;
-    }
-}
-
-/* 💻 Desktop (KEEP 2 ONLY) */
-@media (min-width: 1024px) {
-    .trainer-grid {
-        grid-template-columns: repeat(3, 1fr); /* 🔥 force 2 */
-        min-height: 700px;
-    }
-}
-
-
-/* Card */
-.trainer-card {
-    height: 100%;
-    background: rgb(255, 255, 255);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    min-height: 380px;
-
-}
-
-/* Hover effect (card lift) */
-.trainer-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Image */
-.trainer-image {
-    height: 250px;
-    padding: 15px;
-    overflow: hidden;
-}
-
-.trainer-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: 0.3s;
-}
-
-/* Zoom effect */
-.trainer-card:hover img {
-    transform: scale(1.05);
-}
-
-/* Info */
-.trainer-info {
-    padding: 15px;
-    text-align: center;
-}
-
-.trainer-info h3 {
-    margin: 10px 0 5px;
-}
-
-.title {
-    color: var(--maingreencolor);
-    font-weight: bold;
-    margin-bottom: 5px;
-}
 
 /* FOOTER */
 footer {
