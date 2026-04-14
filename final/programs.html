@@ -68,47 +68,13 @@
         </section>
     
         <!-- Trainer Spotlight -->
-        <section class="trainers">
-            <div class="container">
-              <h2>Meet Our Trainers</h2>
-        
-              <div id="trainer-container" class="trainer-grid">
-        
-                <!-- 🔥 PLACEHOLDER CARDS (VERY IMPORTANT) -->
-                <div class="trainer-card">
-                    <div class="trainer-image"></div>
-                    <div class="trainer-info"></div>
-                  </div>
-                  
-                  <div class="trainer-card">
-                    <div class="trainer-image"></div>
-                    <div class="trainer-info"></div>
-                  </div>
-                  
-                  <div class="trainer-card">
-                    <div class="trainer-image"></div>
-                    <div class="trainer-info"></div>
-                  </div>
-
-                  <div class="trainer-card">
-                    <div class="trainer-image"></div>
-                    <div class="trainer-info"></div>
-                  </div>
-                  
-                  <div class="trainer-card">
-                    <div class="trainer-image"></div>
-                    <div class="trainer-info"></div>
-                  </div>
-                  
-                  <div class="trainer-card">
-                    <div class="trainer-image"></div>
-                    <div class="trainer-info"></div>
-                  </div>
-        
-              </div>
-        
-            </div>
-        </section>
+        <section class="trainers-section">
+            <h2>Meet Our Trainers</h2>
+          
+            <div id="trainers-container" class="trainers-grid"></div>
+          </section>
+          
+          <script src="scripts/trainers.js"></script>
     
     </main>
 
@@ -123,6 +89,19 @@
           <p><strong>Who it's for:</strong> <span id="modal-audience"></span></p>
           <p><strong>Timings:</strong> <span id="modal-timing"></span></p>
           <p><strong>Trainer:</strong> <span id="modal-trainer"></span></p>
+        </div>
+      </div>
+
+      <div id="trainer-modal" class="trainer-modal">
+        <div class="trainer-modal-content">
+          <span class="trainer-close-btn">&times;</span>
+      
+          <img id="trainer-modal-img" alt="Trainer">
+      
+          <h2 id="trainer-modal-name"></h2>
+          <p id="trainer-modal-title"></p>
+          <p id="trainer-modal-availability"></p>
+          <p id="trainer-modal-contact"></p>
         </div>
       </div>
 

@@ -131,43 +131,36 @@ window.addEventListener("click", (e) => {
 });
 
 // ===============================
-// TRAINER SPOTLIGHT (DYNAMIC)
+// TRAINERS (IMAGE ONLY + MODAL)
 // ===============================
-const container = document.getElementById("trainer-container");
+const TRAINER_URL = "https://samlevisamson.github.io/wdd231/final/data/trainers.json";
 
-const url = "https://samlevisamson.github.io/wdd231/final/data/trainers.json";
+const trainerModal = document.getElementById("trainer-modal");
+const trainerCloseBtn = document.querySelector(".trainer-close-btn");
 
 async function loadTrainers() {
   try {
-    const response = await fetch(url);
+    const response = await fetch(TRAINER_URL);
     const trainers = await response.json();
 
-    // 🔥 Select existing placeholder cards
     const cards = document.querySelectorAll(".trainer-card");
 
     cards.forEach((card, index) => {
       const trainer = trainers[index];
       if (!trainer) return;
 
+      // 👇 ONLY IMAGE
       card.innerHTML = `
-        <div class="trainer-image">
-          <img 
-            src="${trainer.image}" 
-            alt="${trainer.first_name}"
-            width="300"
-            height="220"
-            loading="lazy"
-            decoding="async"
-          >
-        </div>
-
-        <div class="trainer-info">
-          <h3>${trainer.first_name} ${trainer.last_name}</h3>
-          <p class="title">${trainer.title}</p>
-          <p>${trainer.availability}</p>
-          <p>${trainer.contact_number}</p>
-        </div>
+        <img 
+          src="${BASE_TRAINER_URL + trainer.image}" 
+          alt="${trainer.first_name}"
+          class="trainer-img"
+          loading="lazy"
+        >
       `;
+
+      // 👇 CLICK → OPEN MODAL
+      card.addEventListener("click", () => openTrainerModal(trainer));
     });
 
   } catch (error) {
@@ -177,6 +170,44 @@ async function loadTrainers() {
 
 loadTrainers();
 
+
+// ===============================
+// OPEN MODAL
+// ===============================
+function openTrainerModal(trainer) {
+  document.getElementById("trainer-modal-img").src =
+    BASE_TRAINER_URL + trainer.image;
+
+  document.getElementById("trainer-modal-name").textContent =
+    `${trainer.first_name} ${trainer.last_name}`;
+
+  document.getElementById("trainer-modal-title").textContent =
+    trainer.title;
+
+  document.getElementById("trainer-modal-availability").textContent =
+    trainer.availability;
+
+  document.getElementById("trainer-modal-contact").textContent =
+    trainer.contact_number;
+
+  trainerModal.classList.add("show");
+  document.body.classList.add("blur");
+}
+
+// ===============================
+// CLOSE MODAL
+// ===============================
+trainerCloseBtn.addEventListener("click", () => {
+  trainerModal.classList.remove("show");
+  document.body.classList.remove("blur");
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === trainerModal) {
+    trainerModal.classList.remove("show");
+    document.body.classList.remove("blur");
+  }
+});
 
 // ===============================
 // FOOTER DATES
