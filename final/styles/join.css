@@ -264,7 +264,7 @@ dialog::backdrop {
 }
 
 .site-footer {
-    max-width: auto;
+    
     margin: 0 auto;
     padding: 25px 20px;
     background: var(--whitebackground);
