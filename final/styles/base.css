@@ -328,14 +328,22 @@ nav a.active::after {
 /* CTA BUTTON */
 .finalcta-button {
     display: inline-block;
-    background: var(--bluecolor);
-    color: var(--whitebackground);
+    background: var(--whitebackground);
+    color: var(--blackcolor);
     padding: 10px 20px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s ease;
 }
+
+/* HOVER EFFECT */
+.finalcta-button:hover {
+    background: var(--bluecolor);
+    color: var(--whitebackground);
+    transform: scale(1.05);
+}
+
 
 /* Inner content */
 .final-cta > * {
@@ -345,7 +353,7 @@ nav a.active::after {
 }
 
 .final-cta {
-    background: var(--maingreencolor);
+    background: var(--orangecolor);
     width: 100%;
     padding: 40px 0;
 }
@@ -355,7 +363,7 @@ nav a.active::after {
     margin: auto;
     padding: 0 1rem;
     text-align: center;
-    color: var(--whitebackground);
+    color: var(--blackcolor);
 }
 
 /* FOOTER */
