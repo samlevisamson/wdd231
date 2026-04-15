@@ -27,7 +27,7 @@ body {
     min-height: 100vh;
 }
 
-h2 {
+h1, h2 {
     color: var(--maingreencolor);
     text-align: center;
     
