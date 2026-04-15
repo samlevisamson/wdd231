@@ -17,7 +17,7 @@
         top: 0;
         right: -100%; /* hidden */
         width: 150px;
-        height: 25vh;
+        height: 28vh;
         background: white;
         box-shadow: -2px 0 10px rgba(0,0,0,0.2);
         transition: right 0.3s ease;
@@ -34,11 +34,11 @@
     .navigation {
         flex-direction: column;
         gap: 20px;
-        padding: 20px;
+        padding: 10px;
     }
 
     .navigation li {
-        text-align: left;
+        text-align: center;
     }
 
     .navigation a {
