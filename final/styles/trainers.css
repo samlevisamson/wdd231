@@ -126,7 +126,7 @@ main {
 
 .trainers-grid {
 
-    height: 450;
+    height: auto;
     max-width: 1200px;
 
     display: grid;
