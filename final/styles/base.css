@@ -31,6 +31,12 @@ h2 {
     margin-bottom: 20px;
 }
 
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 1rem;
+}
+
 /* HEADER */
 header {
     background: var(--whitebackground);
@@ -42,9 +48,6 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    max-width: 1200px;
-    margin: auto;
-    padding: 10px 1rem;
 }
 
 /* LEFT */
@@ -131,7 +134,7 @@ nav a.active::after {
     max-width: 400px;
 
     background: rgba(0,0,0,0.5);
-    color: white;
+    color: var(--whitebackground);
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
@@ -175,7 +178,7 @@ nav a.active::after {
 /* HOVER EFFECT */
 .cta-button:hover {
     background: var(--bluecolor);
-    color: rgb(255, 255, 255);
+    color: var(--whitebackground);
     transform: scale(1.05);
 }
 
@@ -186,9 +189,6 @@ nav a.active::after {
 .feature-slider {
     position: relative;
     overflow: hidden;
-    max-width: 1200px;
-    margin: auto;
-    padding: 10px 1rem;
 }
 
 .feature-track {
@@ -256,9 +256,6 @@ nav a.active::after {
 /* GRID */
 .feature-grid,
 .program-grid {
-    max-width: 1200px;
-    margin: auto;
-    padding: 10px 1rem;
 
     text-align: center;
 
@@ -300,9 +297,7 @@ nav a.active::after {
 ========================= */
 
 .top-sections {
-    max-width: 1200px;
-    margin: auto;
-    padding: 10px 1rem;
+    
     text-align: center;
     
     display: grid;
@@ -318,27 +313,17 @@ nav a.active::after {
 
 /* OPTIONAL: keep cards nice */
 .events {
-    background: rgb(255, 255, 255);
+    background: var(--whitebackground);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 10px 1rem;
-}
 
 
 /* =========================
    FINAL CTA (FULL WIDTH BG + CENTERED CONTENT)
 ========================= */
-
-.final-cta {
-    background: var(--maingreencolor);
-    width: 100%;
-}
 
 /* Inner content */
 .final-cta > * {

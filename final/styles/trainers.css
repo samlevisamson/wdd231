@@ -253,7 +253,7 @@ main {
     font-weight: bold;
 
     background: var(--orangecolor);
-    color: white;
+    color: var(--whitebackground);
 
     border-radius: 50%;
     cursor: pointer;
