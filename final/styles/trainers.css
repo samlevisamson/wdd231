@@ -23,7 +23,7 @@ body {
     margin: 0;
     font-family: "Roboto", sans-serif;
     background: var(--lightgraycolor);
-    color: var(--darkgraycolor);
+    color: var(--blackcolor);
     min-height: 100vh;
 }
 
@@ -253,7 +253,7 @@ main {
     font-weight: bold;
 
     background: var(--orangecolor);
-    color: var(--whitebackground);
+    color: var(--blackcolor);
 
     border-radius: 50%;
     cursor: pointer;
@@ -263,6 +263,7 @@ main {
 
 .trainer-close-btn:hover {
     background: var(--maingreencolor);
+    color: var(--whitebackground);
     transform: rotate(90deg);
 }
 
