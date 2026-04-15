@@ -325,6 +325,18 @@ nav a.active::after {
    FINAL CTA (FULL WIDTH BG + CENTERED CONTENT)
 ========================= */
 
+/* CTA BUTTON */
+.finalcta-button {
+    display: inline-block;
+    background: var(--bluecolor);
+    color: var(--whitebackground);
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
 /* Inner content */
 .final-cta > * {
     max-width: 1200px;
@@ -343,7 +355,7 @@ nav a.active::after {
     margin: auto;
     padding: 0 1rem;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: var(--whitebackground);
 }
 
 /* FOOTER */

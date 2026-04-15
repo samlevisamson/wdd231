@@ -244,7 +244,7 @@ body.blur footer {
 
 /* CONTENT */
 .modal-content {
-    background: white;
+    background: var(--whitebackground);
     padding: 20px;
     border-radius: 12px;
     max-width: 500px;
@@ -279,7 +279,7 @@ body.blur footer {
     font-weight: bold;
 
     background: var(--orangecolor);
-    color: white;
+    color: var(--whitebackground);
 
     border-radius: 50%;
     cursor: pointer;

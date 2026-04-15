@@ -18,7 +18,7 @@
         right: -100%; /* hidden */
         width: 150px;
         height: 28vh;
-        background: white;
+        background: var(--whitebackground);
         box-shadow: -2px 0 10px rgba(0,0,0,0.2);
         transition: right 0.3s ease;
         z-index: 1000;

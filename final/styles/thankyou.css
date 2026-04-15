@@ -181,14 +181,14 @@ section h2 {
 
 /* ===== HIGHLIGHT MEMBERSHIP ===== */
 .result-item.membership {
-    background: #e8f1ec; /* soft green */
+    background: rgb(232, 241, 236); /* soft green */
     border-left: 4px solid var(--maingreencolor);
     font-weight: 600;
 }
 
 /* ===== HOVER EFFECT (Optional but 🔥) ===== */
 .result-item:hover {
-    background: #edf5f0;
+    background: rgb(237, 245, 240);
 }
 
 #results.loaded {
@@ -252,7 +252,7 @@ section h2 {
 
 .btn {
     background: var(--maingreencolor);
-    color: white;
+    color: var(--whitebackground);
     padding: 10px 15px;
     text-decoration: none;
     border-radius: 6px;
