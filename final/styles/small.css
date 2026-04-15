@@ -47,12 +47,6 @@
 }
     /* HERO */
 
-    .hero {
-        position: relative;
-        overflow: hidden;
-    }
-
-    
 
     @media (max-width: 640px) {
         .hero img {
