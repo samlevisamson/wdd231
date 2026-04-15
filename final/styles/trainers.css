@@ -119,11 +119,14 @@ main {
 
 
 .trainers-grid {
+
+    height: 450;
+    max-width: 1200px;
+
     display: grid;
     gap: 15px;
+
     
-    max-width: 1200px;
-    height: 450;
     margin: auto;
     padding: 10px 1rem;
     
