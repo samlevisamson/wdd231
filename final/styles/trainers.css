@@ -226,11 +226,14 @@ main {
 .trainer-modal-content h2 {
     margin: 10px 0 5px;
     color: var(--maingreencolor);
+    font-size: xx-large;
 }
 
 .trainer-modal-content p {
     margin: 6px 0;
     font-size: 0.95rem;
+    color: var(--bluecolor);
+    font-size: large;
 }
 
 
