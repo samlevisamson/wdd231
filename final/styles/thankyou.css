@@ -199,7 +199,8 @@ section h2 {
 @media (max-width: 600px) {
     .result-item {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
         gap: 4px;
     }
 }   
@@ -266,4 +267,23 @@ footer {
     text-align: center;
     background: var(--whitebackground);
     padding: 10px;
+}
+
+/* FOOTER */
+
+
+/* VIDEO BUTTON */
+.video-link-btn {
+    display: inline-block;
+    padding: 8px 14px;
+    background-color: var(--maingreencolor);
+    color: var(--whitebackground);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.video-link-btn:hover {
+    background-color: rgb(204, 24, 30);
+    color: var(--whitebackground);
 }

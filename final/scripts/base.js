@@ -65,7 +65,7 @@ const featureImages = document.querySelectorAll(".feature-img");
 
 featureImages.forEach((img, index) => {
     if (index === 0) {
-        img.setAttribute("fetchpriority", "high"); // 🔥 first image
+        img.setAttribute("fetchpriority", "high"); //  first image
     } else {
         img.setAttribute("loading", "lazy");       // lazy load others
         img.setAttribute("decoding", "async");     // smoother rendering
