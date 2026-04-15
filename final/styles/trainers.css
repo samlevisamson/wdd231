@@ -181,7 +181,7 @@ main {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.65);
+    background: rgba(242, 140, 40, 0.65);
     backdrop-filter: blur(4px); /* 🔥 modern glass effect */
     justify-content: center;
     align-items: center;
