@@ -27,11 +27,17 @@ body {
     min-height: 100vh;
 }
 
-h1, h2 {
+h1 {
     color: var(--maingreencolor);
     text-align: center;
     
-}
+}   
+
+h2 {
+    color: var(--blackcolor);
+    text-align: center;
+    font-size:1.1em;
+} 
 
 /* HEADER */
 header {
