@@ -23,7 +23,7 @@ body {
     margin: 0;
     font-family: "Roboto", sans-serif;
     background: var(--lightgraycolor);
-    color: var(--blackcolor);
+    
     min-height: 100vh;
 }
 
